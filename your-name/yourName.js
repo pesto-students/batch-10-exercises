@@ -1,6 +1,6 @@
 
 function yourName(...args) {
-  return args;
+  return 'Arfat Salman';
 }
 
 export {
