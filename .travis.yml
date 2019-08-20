@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '10.15'
+script:
+  - yarn test
+after_script:
+  - node .submission-system/submitter.js
