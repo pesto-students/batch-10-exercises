@@ -27,7 +27,7 @@
             "completed": true
         },
         "return-a-string-test": {
-            "completed": false
+            "completed": true
         },
         "return-true-test": {
             "completed": false
