@@ -3,7 +3,8 @@ const factorial = (number) => {
   while (number !== 0) {
     fact *= number;
     // eslint-disable-next-line
-    --number;
+    // --number;
+    number-=1
   }
   return fact;
 };
@@ -19,6 +20,8 @@ describe('factorial test', () => {
 
   test('should find factorial of 0', () => {
     // delete next line and replace it with proper test
-    expect(true).toEqual(false);
+    const actual= factorial(0);
+    const expected = 1;
+    expect (actual).toEqual(expected);
   });
 });
