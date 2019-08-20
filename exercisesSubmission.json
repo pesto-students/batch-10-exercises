@@ -12,31 +12,31 @@
             "completed": true
         },
         "factorial-test": {
-            "completed": false
+            "completed": true
         },
         "get-name-test": {
-            "completed": false
+            "completed": true
         },
         "logical-operators": {
-            "completed": false
+            "completed": true
         },
         "number-sum-test": {
-            "completed": false
+            "completed": true
         },
         "return-a-function-test": {
-            "completed": false
+            "completed": true
         },
         "return-a-string-test": {
-            "completed": false
+            "completed": true
         },
         "return-true-test": {
-            "completed": false
+            "completed": true
         },
         "stack-test": {
-            "completed": false
+            "completed": true
         },
         "sum-test": {
-            "completed": false
+            "completed": true
         }
     }
 }
