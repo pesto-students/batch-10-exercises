@@ -6,10 +6,10 @@
             "completed": true
         },
         "create-object-test": {
-            "completed": false
+            "completed": true
         },
         "every-nth-test": {
-            "completed": false
+            "completed": true
         },
         "factorial-test": {
             "completed": false
