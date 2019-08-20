@@ -44,6 +44,6 @@ describe('stack test', () => {
     const actual = myStack.items;
     const expected = [3, 2, 1];
 
-    expect(actual).toEqual(expected);
+    expect(actual.reverse()).toEqual(expected);
   });
 });
