@@ -9,7 +9,7 @@
             "completed": true
         },
         "every-nth-test": {
-            "completed": false
+            "completed": true
         },
         "factorial-test": {
             "completed": false
