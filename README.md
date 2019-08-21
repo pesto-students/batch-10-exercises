@@ -8,11 +8,12 @@
     }
     console.log(y);
   ```
+  A: `lundefined`
 
 2) Assuming obj is an “empty” object in scope, say:
   ```js
     var obj = {};
-    
+
     // What is accomplished using the following code?
 
     ['JS', 'C++'].forEach(function(k) {
