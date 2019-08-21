@@ -1,6 +1,6 @@
 
 function isPalindrome(inputString) {
-  inputString = inputString.toLowerCase();
+  inputString = inputString.toString().toLowerCase();
   let cleanedString = removeNonAlphabets(inputString);
 
   let reversedString = cleanedString.split('').reverse().join('');
