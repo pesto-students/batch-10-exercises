@@ -17,7 +17,7 @@ function convertToRoman(num) {
   }
   var romanNumberFinalString = Array(+digitsOfNumInString.join("") + 1).join("M") + romanNumberStartingString;
 
-  return romanNumberFinalString
+  return romanNumberFinalString;
 }
 
 export {
