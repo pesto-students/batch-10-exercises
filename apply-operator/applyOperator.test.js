@@ -11,7 +11,7 @@ describe('applyOperator', () => {
     expect(applyOperator('+', 1, 2, 3, 4, 5)).toEqual(15);
     expect(applyOperator('+', 1)).toEqual(1);
 
-    expect(applyOperator('-', 1, 2, 3, 4, 5)).toEqual(-15);
+    expect(applyOperator('-', 1, 2, 3, 4, 5)).toEqual(-13);
     expect(applyOperator('-', 1)).toEqual(-1);
 
     expect(applyOperator('*', 1, 2, 3, 4, 5)).toEqual(120);
