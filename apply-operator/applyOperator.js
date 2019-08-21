@@ -11,10 +11,14 @@ function applyOperator(...args) {
     input.forEach(function (val) {
       ans += val;
     });
+  break;
   case "-": 
     input.forEach(function (val) {
       ans -= val;
     });
+  break;
+  default :
+    return ;
   }
 
   return ans;
