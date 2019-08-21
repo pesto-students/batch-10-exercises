@@ -1,6 +1,6 @@
 
 function applyOperator(...args) {
-  return args;
+  return args; 
 }
 
 export {
