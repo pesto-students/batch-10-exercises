@@ -1,4 +1,6 @@
-import { binaryAgent } from './binaryAgent';
+import {
+  binaryAgent,
+} from './binaryAgent';
 
 describe('binaryAgent', () => {
   test('should return correct output', () => {
