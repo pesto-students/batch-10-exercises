@@ -1,6 +1,7 @@
-
 function counter(...args) {
-  return args;
+  var mycounter = 1;
+  function counterfunc() { mycounter++; };
+  return counterfunc();
 }
 
 export {
