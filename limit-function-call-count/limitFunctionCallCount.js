@@ -1,8 +1,12 @@
+function limitFunctionCallCount(fn, invokeCount) {
+  let counter = 0;
+  return (...args) => {
+    counter += 1;
 
-function limitFunctionCallCount(...args) {
-  return args;
+    if (counter > invokeCount) return null;
+
+    return fn(...args);
+  };
 }
 
-export {
-  limitFunctionCallCount,
-};
+export { limitFunctionCallCount };
