@@ -11,7 +11,6 @@ function convertToRoman(num) {
     "", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"
   ];
 
-
   while (i--) {
     romanNumberStartingString = (key[+digitsOfNumInString.pop() + (i * 10)] || "") + romanNumberStartingString;
   }
