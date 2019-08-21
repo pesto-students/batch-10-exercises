@@ -1,6 +1,6 @@
 
-function binaryAgent(...args) {
-  return args;
+function binaryAgent(binaryInput) {
+  return binaryInput.split(' ').map((currentValue) => String.fromCharCode(parseInt(currentValue, 2))).join(' ');
 }
 
 export {
