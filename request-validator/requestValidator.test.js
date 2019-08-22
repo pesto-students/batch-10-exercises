@@ -23,6 +23,14 @@ describe('requestValidator', () => {
     expect(() => requestValidator(request)).toThrow('Invalid request header: Invalid URI');
   });
 
+  test('should throw error if version is invalid', () => {
+    const request = {
+      ...validRequest,
+      version: 'HTTP/1.2',
+    };
+    expect(() => requestValidator(request)).toThrow('Invalid request header: Invalid Version');
+  });
+
   test('should throw error if message is not present', () => {
     const request = {
       method: 'GET',
