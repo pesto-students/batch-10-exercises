@@ -1,9 +1,9 @@
 
 function mapObject(inputObject) {
-  let mappedObject = {};
+  const mappedObject = {};
   for (const key in inputObject) {
     if (inputObject.hasOwnProperty(key)) {
-      let squaredElement = inputObject[key] ** 2;
+      const squaredElement = inputObject[key] ** 2;
       mappedObject[key] = squaredElement;
     }
   }
