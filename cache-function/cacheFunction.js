@@ -1,10 +1,10 @@
 
 function cacheFunction(func) {
-  var cachedFuncResultMap = []; 
+  var cachedFuncResultMap = {}; 
   var cachedFunc = func;
 
   return (val) => {
-    if(cachedFuncResultMap[val] === undefined){
+    if( !cachedFuncResultMap.hasOwnProperty(val) ){
       cachedFuncResultMap[val] = cachedFunc(val);
     }
     return cachedFuncResultMap[val];
