@@ -1,12 +1,8 @@
 
-function isTriangle(...args) {
-
-  if(args.length != 3)
-    return false;
-
-  args.sort();
-
-  return args[0] + args[1] > args[2];
+function isTriangle(sides) {
+  sides.sort();
+  //     smallest + greater > greatest
+  return sides[0] + sides[1] > sides[2];
 }
 
 export {
