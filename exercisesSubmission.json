@@ -27,7 +27,7 @@
             "completed": false
         },
         "binary-agent": {
-            "completed": false
+            "completed": true
         },
         "bouncer": {
             "completed": false
