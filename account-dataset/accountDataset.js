@@ -12,10 +12,6 @@ function datasetWithRoundedDollar() {
   for (const account of accountList) {
     account.rounded = null;
   }
-  // accountList.map((account) => {
-  //   account.rounded = null;
-  //   return account;
-  // });
   return accountList;
 }
 export {
