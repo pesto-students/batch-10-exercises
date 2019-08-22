@@ -10,7 +10,7 @@ function hundredThousandairs() {
 function datasetWithRoundedDollar() {
   const accountList = dataset.bankBalances;
   for (const account of accountList) {
-    account.rounded = null;
+    account.rounded = Math.round(account.amount);
   }
   return accountList;
 }
