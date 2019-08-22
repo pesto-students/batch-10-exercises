@@ -3,11 +3,11 @@ function cacheFunction(func) {
   var cachedFuncResultMap = {}; 
   var cachedFunc = func;
 
-  return (val) => {
-    if( !cachedFuncResultMap.hasOwnProperty(val) ){
-      cachedFuncResultMap[val] = cachedFunc(val);
+  return (...args) => {
+    if( !cachedFuncResultMap.hasOwnProperty(args) ){
+      cachedFuncResultMap[args] = cachedFunc(...args);
     }
-    return cachedFuncResultMap[val];
+    return cachedFuncResultMap[args];
   }
 }
 
