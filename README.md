@@ -1,6 +1,6 @@
 # Questions
 
-1) What will be the output of this code ? 
+1) What will be the output of this code ?
   ```js
   var x = { foo : 1};
   var output = (function() {
@@ -10,6 +10,7 @@
 
   console.log(output);
   ```
+  A: `undefined`
 
 2) What will be the output of the following code ?
   ```js
