@@ -15,6 +15,7 @@
     };
     console.log(obj.innerMessage());
   ```
+  A: `undefined`
 
 2) What would be the output of the following code ?
 
