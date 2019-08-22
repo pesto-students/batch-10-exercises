@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-globals */
 /* eslint-disable no-underscore-dangle */
 const EMAIL_REGEX = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/g;
-const LASTNAME_REGEX = /^[A-Za-z]+$/;
+const ALPHABET_REGEX = /^[A-Za-z]+$/;
 const MIN_FIRST_NAME_LENGTH = 3;
 const MAX_FIRST_NAME_LENGTH = 20;
 
@@ -21,7 +21,7 @@ class SavingsAccount {
   }
 
   set lastName(lastName) {
-    if (!lastName.match(LASTNAME_REGEX)) {
+    if (!lastName.match(ALPHABET_REGEX)) {
       throw Error('Last name must contain english alphabets only');
     }
     this._lastName = lastName;
