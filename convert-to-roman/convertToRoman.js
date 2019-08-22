@@ -1,6 +1,9 @@
 
 function convertToRoman(inputNumber) {
-  if (typeof inputNumber !== 'number') throw Error(`Expected number. Received ${typeof inputNumber}`);
+  if (typeof inputNumber !== 'number') {
+    throw Error(`Expected number. Received ${typeof inputNumber}`);
+  }
+
   const defaultRomanValue = 'I';
   let outputRomanText;
   switch (inputNumber) {
@@ -13,10 +16,7 @@ function convertToRoman(inputNumber) {
     case inputNumber === 5:
       outputRomanText = 'V';
       break;
-    case inputNumber === 10:
-      outputRomanText = 'X';
-      break;
-    case inputNumber > 10:
+    case inputNumber >= 10:
       outputRomanText = `X${defaultRomanValue.repeat(inputNumber - 10)}`;
       break;
     default:
