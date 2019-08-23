@@ -14,8 +14,20 @@ function datasetWithRoundedDollar() {
   }
   return accountList;
 }
+function sumOfBankBalances() {
+  const accountList = dataset.bankBalances;
+  let sum = 0;
+  for (const account of accountList) {
+    sum += parseFloat(account.amount);
+  }
+  return parseFloat(sum.toFixed(2));
+}
+function sumOfInterests() {
+}
 export {
   accountDataset,
   hundredThousandairs,
   datasetWithRoundedDollar,
+  sumOfBankBalances,
+  sumOfInterests,
 };
