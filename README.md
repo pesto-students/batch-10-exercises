@@ -9,10 +9,7 @@
       console.log(objA === objB);
     }());
   ```
-  - false true
-  - false false
-  - true false
-  - true true
+  A: - false false
 
 2) What are multiple run-times in the event loop?
 
