@@ -1,6 +1,16 @@
+function isEvenWithoutMod(val) {
+  if(val == 0) {
+    return true;
+  }
+  else if(val < 0) {
+    return false;
+  }
 
-function isEven(...args) {
-  return args;
+  return isEvenWithoutMod(val - 2);
+}
+
+function isEven(value) {
+  return isEvenWithoutMod(Math.abs(value));
 }
 
 export {

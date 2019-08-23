@@ -1,6 +1,6 @@
 
-function booWho(...args) {
-  return args;
+function booWho(possibleBoolean) {
+  return typeof possibleBoolean === 'boolean';
 }
 
 export {
