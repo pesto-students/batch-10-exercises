@@ -1,7 +1,7 @@
 function squareNumbersArray(...numberArray) {
-  const hasString = numberArray.find((value) => typeof value === 'string');
-  if (hasString) {
-    throw Error('My custom error');
+  const hasAllNumbers = numberArray.every((value) => typeof value === 'number');
+  if (!hasAllNumbers) {
+    throw new Error('My custom error');
   }
   const square = (number) => number ** 2;
   return numberArray.map(square);
