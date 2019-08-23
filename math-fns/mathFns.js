@@ -1,14 +1,14 @@
 
 function sqrt(num) {
-  return 7;
+  return Math.sqrt(num);
 }
 
-function power(num, raisedTo) {
-  return 16;
+function power(base, raisedTo) {
+  return Math.pow(base, raisedTo);
 }
 
 function round(num) {
-  return 7;
+  return Math.round(num);
 }
 
 export {
