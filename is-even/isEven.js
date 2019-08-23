@@ -1,7 +1,7 @@
 
-function isEven(...args) {
+function isEven(mayBeEvenNumber) {
   // eslint-disable-next-line no-bitwise
-  return !(args & 1);
+  return !(mayBeEvenNumber & 1);
 }
 
 export {
