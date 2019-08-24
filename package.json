@@ -15,6 +15,7 @@
     "chalk": "*",
     "dotenv": "*",
     "graphql-request": "*",
+    "jasmine": "^3.4.0",
     "node-fetch": "*",
     "rollbar": "*",
     "slash": "*"
@@ -39,6 +40,8 @@
     }
   },
   "lint-staged": {
-    "!(*.test).js": ["eslint"]
+    "!(*.test).js": [
+      "eslint"
+    ]
   }
 }

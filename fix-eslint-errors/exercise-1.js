@@ -67,7 +67,7 @@ describe('Promise.each', () => {
     });
   });
 
-  it('doesnt iterate with an empty array', () => Promise.each([], (val) => {
+  it('doesnt iterate with an empty array', () => Promise.each([], () => {
     throw new Error();
   }).then((ret) => {
     deepEqual(ret, []);
@@ -132,7 +132,7 @@ describe('Promise.prototype.each', () => {
     });
   });
 
-  it('doesnt iterate with an empty array', () => Promise.resolve([]).each((val) => {
+  it('doesnt iterate with an empty array', () => Promise.resolve([]).each(() => {
     throw new Error();
   }).then((ret) => {
     deepEqual(ret, []);
