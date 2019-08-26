@@ -1,8 +1,5 @@
-
 function allPromises(...args) {
   return args;
 }
 
-export {
-  allPromises,
-};
+export { allPromises };
