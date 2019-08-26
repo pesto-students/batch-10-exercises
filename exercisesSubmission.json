@@ -18,7 +18,7 @@
             "completed": true
         },
         "instructor": {
-            "completed": false
+            "completed": true
         },
         "join-arrays": {
             "completed": false
