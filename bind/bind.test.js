@@ -1,4 +1,4 @@
-import { bind, firstNameFavoriteColor } from './bind';
+import { bind } from './bind';
 
 describe('bind', () => {
   function addFourNumbers(a, b, c, d) {
