@@ -1,5 +1,3 @@
-// Incomplete
-
 function alphabeticShift(inputString) {
   const letters = inputString.split('');
   const getCharCode = letter => letter.charCodeAt(0);
@@ -7,7 +5,7 @@ function alphabeticShift(inputString) {
   const newLetters = letters.map(letter => {
     return getNextLetter(letter);
   });
-  return newLetters.join();
+  return newLetters.join('');
 }
 
 export { alphabeticShift };
