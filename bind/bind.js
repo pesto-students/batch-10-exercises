@@ -1,6 +1,9 @@
 
-function bind(...args) {
-  return args;
+function bind(inputFunction, inputObject) {
+  const thisObj = inputFunction;
+  return function bindFunction() {
+    return thisObj.apply(inputObject);
+  };
 }
 
 export {
