@@ -1,8 +1,5 @@
-
-function blockScoping(...args) {
-  return args;
+function blockScoping(arg) {
+  return arg;
 }
 
-export {
-  blockScoping,
-};
+export { blockScoping };
