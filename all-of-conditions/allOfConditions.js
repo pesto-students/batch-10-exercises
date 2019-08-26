@@ -1,6 +1,6 @@
 
-function allOfConditions(...args) {
-  return args;
+function allOfConditions(...callbacks) {
+  return (input) => callbacks.every((cb) => cb(input));
 }
 
 export {
