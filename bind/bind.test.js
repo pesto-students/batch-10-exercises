@@ -1,4 +1,4 @@
-import { bind } from './bind';
+import { bind, firstNameFavoriteColor } from './bind';
 
 describe('bind', () => {
   function addFourNumbers(a, b, c, d) {
@@ -10,7 +10,7 @@ describe('bind', () => {
   }
 
   const person = {
-    firstName: 'Goku',
+    firstName: 'Goku'
   };
 
   test('returns a function', () => {
@@ -19,9 +19,9 @@ describe('bind', () => {
 
   test('is invoked with the value of the keyword this passed to the function', () => {
     let bindFn = bind(firstNameFavoriteColor, person);
-    expect(bindFn('green')).toBe('Goku\'s favorite color is green');
+    expect(bindFn('green')).toBe("Goku's favorite color is green");
     bindFn = bind(firstNameFavoriteColor, person, 'blue');
-    expect(bindFn('green')).toBe('Goku\'s favorite color is blue');
+    expect(bindFn('green')).toBe("Goku's favorite color is blue");
   });
 
   test('is invoked with the remaining arguments from the outer function and inner function', () => {
