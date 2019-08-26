@@ -1,7 +1,7 @@
 function placeInMiddle(firstArray, secondArray) {
-  if (firstArray.length == 0) {
+  if (firstArray.length === 0) {
     return secondArray;
-  } else if (firstArray.length == 1) {
+  } else if (firstArray.length === 1) {
     return secondArray.concat(firstArray);
   }
   const middleIndex = firstArray.length / 2;
