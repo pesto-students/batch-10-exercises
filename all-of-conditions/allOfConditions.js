@@ -1,6 +1,7 @@
 
-function allOfConditions(...args) {
-  return args;
+function allOfConditions(inputs) {
+  // still working on this problem 
+  return inputs;
 }
 
 export {
