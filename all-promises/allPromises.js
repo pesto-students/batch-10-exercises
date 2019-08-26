@@ -1,3 +1,4 @@
+/* eslint-disable arrow-parens */
 function allPromises(args = []) {
   const results = [];
   args.forEach(arg => {
