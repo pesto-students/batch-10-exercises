@@ -1,9 +1,10 @@
 
-function allOfConditions(inputFunc1, inputFunc2) {
-  if (inputFunc2 && inputFunc2.mock.mockReturnValue) {
-    return inputFunc1;
+function allOfConditions(...inputFunc) {
+  function fn(input) {
+    const arr = [...inputFunc];
+    arr.every((el) => el(input));
   }
-  return (inputFunc1);
+  return fn;
 }
 
 export {
