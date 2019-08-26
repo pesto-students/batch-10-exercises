@@ -9,7 +9,7 @@
             "completed": true
         },
         "greet": {
-            "completed": false
+            "completed": true
         },
         "reject-promise": {
             "completed": false
@@ -27,7 +27,7 @@
             "completed": false
         },
         "is-promise": {
-            "completed": false
+            "completed": true
         },
         "promise-all-props": {
             "completed": false

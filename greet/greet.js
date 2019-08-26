@@ -1,8 +1,7 @@
+function greet(entity) {
+  const p = new Promise((resolve) => resolve(`Hey ${entity}`));
 
-function greet(...args) {
-  return args;
+  return p.then((val) => val);
 }
 
-export {
-  greet,
-};
+export { greet };
