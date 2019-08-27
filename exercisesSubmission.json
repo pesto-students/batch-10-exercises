@@ -6,7 +6,7 @@
             "completed": false
         },
         "all-promises": {
-            "completed": false
+            "completed": true
         },
         "greet": {
             "completed": true
