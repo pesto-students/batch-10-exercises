@@ -1,5 +1,5 @@
 function greet(message) {
-  return new Promise(function(reject, resolve) {
+  return new Promise(function(resolve, reject ) {
     resolve(`Hey ${message}`);
   });
 }
