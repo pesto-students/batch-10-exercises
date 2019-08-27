@@ -1,8 +1,11 @@
 
-function consumableUsers(...args) {
-  return args;
+function ConsumableUsers() {
+  return {
+    nextUser: 'user: Alice',
+    done: false,
+  };
 }
 
 export {
-  consumableUsers,
+  ConsumableUsers,
 };

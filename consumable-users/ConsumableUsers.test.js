@@ -14,7 +14,17 @@ describe('Iterator usages', () => {
       };
     }
 
-    usersIterable = {};
+    usersIterable = {
+      [Symbol.iterator]() {
+        return iteratorFunction();
+      },
+      next() {
+        return {
+          value: 'user: Alice',
+          done: false,
+        };
+      },
+    };
   });
 
   describe('create an iterator/iterable', () => {
