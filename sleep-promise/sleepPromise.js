@@ -1,8 +1,11 @@
 
-function sleepPromise(...args) {
-  return args;
+function sleep(timeout) {
+  const sleepPromise = new Promise((resolve) => setTimeout(resolve, timeout));
+  const sleepPromiseFunction = (value) => sleepPromise.then(() => value);
+  sleepPromiseFunction.then = (value) => sleepPromise.then(value);
+  return sleepPromiseFunction;
 }
 
 export {
-  sleepPromise,
+  sleep,
 };

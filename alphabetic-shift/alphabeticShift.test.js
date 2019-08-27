@@ -2,8 +2,8 @@ import { alphabeticShift } from './alphabeticShift';
 
 describe('Alphabetic Shift Test Cases', () => {
   it('returns a shifted string', () => {
-    expect(alphabeticShift('Pseudopseudohypoparathyroidism'))
-      .toEqual('Qtfvepqtfvepizqpqbsbuizspjejtn');
+    expect(alphabeticShift('Pseudopseudohypoparathyroidismz'))
+      .toEqual('Qtfvepqtfvepizqpqbsbuizspjejtna');
 
     expect(alphabeticShift('Floccinaucinihilipilification'))
       .toEqual('Gmpddjobvdjojijmjqjmjgjdbujpo');
