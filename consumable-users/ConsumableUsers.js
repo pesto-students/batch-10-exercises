@@ -1,7 +1,7 @@
 
 function ConsumableUsers() {
   return {
-    nextUser: 'user: Alice',
+    nextUser: 'Alice',
     done: false,
   };
 }

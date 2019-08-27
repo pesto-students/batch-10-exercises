@@ -18,12 +18,6 @@ describe('Iterator usages', () => {
       [Symbol.iterator]() {
         return iteratorFunction();
       },
-      next() {
-        return {
-          value: 'user: Alice',
-          done: false,
-        };
-      },
     };
   });
 
