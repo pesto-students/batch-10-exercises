@@ -1,6 +1,8 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-plusplus */
 
-function limitFunctionCallCount(...args) {
-  return args;
+function limitFunctionCallCount(callback, limit) {
+  return (...args) => ((limit-- > 0) ? callback(...args) : null);
 }
 
 export {
