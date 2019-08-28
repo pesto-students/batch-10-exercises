@@ -1,8 +1,6 @@
-
 function slice(...args) {
-  return args;
+  const [lowerLimit, upperLimit, array] = [...args];
+  return array.slice(lowerLimit, upperLimit);
 }
 
-export {
-  slice,
-};
+export { slice };
