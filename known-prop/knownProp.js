@@ -1,8 +1,7 @@
 function knownProp(obj) {
   const proxy = new Proxy(obj, {
     get(target, property) {
-      // eslint-disable-next-line no-prototype-builtins
-      const isInvalidProperty = !target.hasOwnProperty(property);
+      const isInvalidProperty = !Reflect.has(target, property);
       if (isInvalidProperty) {
         throw new TypeError(`Unknown property ${property}`);
       }
