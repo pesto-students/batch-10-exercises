@@ -1,8 +1,5 @@
-
-function objectAssign(...args) {
-  return args;
+function objectAssign(target, ...objects) {
+  return objects.reduce((acc, obj) => ({ ...acc, ...obj }), target);
 }
 
-export {
-  objectAssign,
-};
+export { objectAssign };
