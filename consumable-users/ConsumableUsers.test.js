@@ -3,7 +3,7 @@ import { ConsumableUsers } from './ConsumableUsers';
 describe('Iterator usages', () => {
   let usersIterable;
   beforeEach(() => {
-    const consumableUsers = new ConsumableUsers();
+    const consumableUsers = ConsumableUsers;
 
     function iteratorFunction() {
       return {
@@ -16,7 +16,14 @@ describe('Iterator usages', () => {
 
     usersIterable = {
       [Symbol.iterator]() {
-        return iteratorFunction();
+        return {
+          next() {
+            return {
+              value: 'user: Alice',
+              done: false,
+            };
+          },
+        };
       },
     };
   });
@@ -42,7 +49,8 @@ describe('Iterator usages', () => {
     describe('using the iterator', () => {
       let iterator;
       beforeEach(() => {
-        iterator = usersIterable[Symbol.iterator];
+        usersIterable = ConsumableUsers;
+        iterator = usersIterable[Symbol.iterator]();
       });
 
       it('should return `Alice` as first user', () => {
@@ -54,6 +62,7 @@ describe('Iterator usages', () => {
       });
 
       it('should return `Bob` as second user', () => {
+        iterator.next();
         const secondItem = iterator.next();
         expect(secondItem).toEqual({
           value: 'user: Bob',
@@ -63,7 +72,7 @@ describe('Iterator usages', () => {
 
       it('should return `done:true`, which means there are no more items', () => {
         iterator.next();
-        iterator.xyz();
+        iterator.next();
         const beyondLast = iterator.next();
         expect(beyondLast).toEqual({
           value: undefined,
@@ -73,26 +82,32 @@ describe('Iterator usages', () => {
     });
 
     describe('using built-in constructs', () => {
+      beforeEach(() => {
+        usersIterable = ConsumableUsers;
+      });
       it('use `Array.from()` to convert the iterable to an array (which is also iterable)', () => {
-        const users = usersIterable;
+        const users = Array.from(usersIterable);
         expect(users).toEqual(['user: Alice', 'user: Bob']);
       });
 
       it('use for-of to loop over an iterable', () => {
         const users = [];
+        for (const user of usersIterable) {
+          users.push(user);
+        }
         expect(users).toEqual(['user: Alice', 'user: Bob']);
       });
 
       it('use the spread-operator to convert/add iterable to an array', () => {
-        const users = [];
+        const users = ['noname', ...usersIterable];
         expect(users).toEqual(['noname', 'user: Alice', 'user: Bob']);
       });
 
       it('de-structure an iterable like an array', () => {
-        const {
+        const [
           firstUser,
           secondUser,
-        } = usersIterable;
+        ] = [...usersIterable];
         expect(firstUser).toBe('user: Alice');
         expect(secondUser).toBe('user: Bob');
       });
