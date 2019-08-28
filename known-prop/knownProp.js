@@ -1,8 +1,8 @@
 
 function knownProp( collection ) {
-  return new Proxy( collection , Handler );
+  return new Proxy( collection , CollectionHandler );
 }
-const Handler = {
+const CollectionHandler = {
   get: function(target , key, value) {
     for(let keyInTarget in target){
       if(keyInTarget === key){
