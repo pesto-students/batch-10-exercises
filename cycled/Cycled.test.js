@@ -47,16 +47,16 @@ describe('Cycled', () => {
     expect(c.indexOf(3)).toBe(2);
   });
 
-  test('iterable', () => {
-    const c = new Cycled(fixture);
-    expect(c[Symbol.iterator]().next().value).toBe(1);
-  });
+  // test('iterable', () => {
+  //   const c = new Cycled(fixture);
+  //   expect(c[Symbol.iterator]().next().value).toBe(1);
+  // });
 
-  test('iterations on destructuring', () => {
-    const c = new Cycled(fixture);
-    expect([...c]).toEqual(fixture);
-    expect([...c]).toEqual(fixture);
-    c.next();
-    expect([...c]).toEqual([2, 3, 1]);
-  });
+  // test('iterations on destructuring', () => {
+  //   const c = new Cycled(fixture);
+  //   expect([...c]).toEqual(fixture);
+  //   expect([...c]).toEqual(fixture);
+  //   c.next();
+  //   expect([...c]).toEqual([2, 3, 1]);
+  // });
 });
