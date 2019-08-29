@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit Length</title>
+    <style>
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        input:valid {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <label id='inputFruit' for="choose" aria-label="Would you prefer a banana or a cherry?">
+            Would you prefer a banana or a cherry?
+        </label>
+        <input id="choose" minlength="6" required name="i_like" aria-labelledby='inputFruit'>
+        <button aria-label="Submit">Submit</button>
+    </form>
+</body>
+
+</html>
