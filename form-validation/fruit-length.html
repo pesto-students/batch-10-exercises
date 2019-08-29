@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Form-Validation(fruit-length)</title>
+    <style>
+      input:invalid {
+        border: 1.5px dashed red;
+      }
+      input:valid {
+        border: 1px solid green;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form>
+        <label for="cherryOrBananaTextbox">
+          Would you prefer a banana or a cherry?
+        </label>
+        <input
+          id="cherryOrBananaTextbox"
+          name="cherryOrBananaTextbox"
+          type="text"
+          aria-required="true"
+          required="true"
+          minlength="6"
+        />
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
