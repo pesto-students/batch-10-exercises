@@ -1,1 +1,29 @@
-Make some complex figures using canvas.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Canvas</title>
+    <style>
+        canvas {
+            border: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sample Gradient</h1>
+    <canvas id="sample-canvas" width="200" height="200">
+    </canvas>
+    <script>
+        const canvasEl = document.getElementById("sample-canvas");
+        const canvasContext = canvasEl.getContext("2d");
+
+        const gradient = canvasContext.createLinearGradient(0, 0, 209, 0);
+        gradient.addColorStop(0, "violet");
+        gradient.addColorStop(1, "red");
+        canvasContext.fillStyle = gradient;
+        canvasContext.fillRect(0,0,200,200);
+    </script>
+</body>
+</html>
