@@ -39,3 +39,8 @@ h1 {
 }
 
 /* Your CSS below here */
+
+
+header , footer{
+  background:url('./bottom-image.png'); 
+}

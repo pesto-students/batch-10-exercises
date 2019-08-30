@@ -1,5 +1,27 @@
-html {
+html , body{
   font-family: sans-serif;
+  margin:0;
+  padding: 0;
 }
-
+.cool-box{
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  padding: 15px 25px;
+  font-size: 3.5vh;
+  border: 1px solid; 
+  border-radius: 8px; 
+  box-shadow: 0.25vw 0.25vw 0.5vw black;
+}
+.cool-box-red{
+  background-color: #d7392f;
+  border-color: #9c271f; 
+  color: #ea3f33;
+  text-shadow: 0.2vw 0.1vw 0.2vw #000;
+  background-image: linear-gradient(#df3d32, #9b221a);
+}
+/* .medium-size-cool-box{
+  height: 40px;
+  width: 100px;
+} */
 /* Your CSS below here */
