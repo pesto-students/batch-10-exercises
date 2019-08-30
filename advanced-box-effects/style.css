@@ -1,0 +1,15 @@
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Bottom right text */
+.text-block {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    color: black;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
