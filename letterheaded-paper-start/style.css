@@ -8,13 +8,12 @@ html {
 
 body p{
   margin: 0;
-  background: #ccc;
+  /* background: #ccc; */
 }
 
 article {
   width: 210mm;
   height: 297mm;
-  margin: 20px auto;
   position: relative;
 }
 
@@ -38,4 +37,15 @@ h1 {
   text-shadow: 1px 1px 1px black;
 }
 
-/* Your CSS below here */
+article img {
+  box-shadow: 1px 1px black;
+  border-radius: 4em;
+  position: relative;
+  bottom: 47px;
+  right: -14px;
+}
+article h1 {
+  top: -67px;
+  left: 15px;
+  color: #fff;
+}
