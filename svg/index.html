@@ -1,14 +1,39 @@
-<!-- Make a star using svg. -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Svg sample</title>
+    <style>
+      body {
+        background-color: black;
+        height: 100%;
+        text-align: center;
+      }
+      .star-svg {
+        text-align: center;
+      }
+      .star-caption {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <figure>
+        <svg class="star-svg" height="200" width="200">
+          <polygon
+            points="100,10 40,198 190,78 10,78 160,198"
+            style="fill:whitesmoke;stroke:royalblue;stroke-width:0.3px;"
+          />
+        </svg>
+        <figcaption class="star-caption">
+          A SVG star -- made by HTML & Prasham
+        </figcaption>
+      </figure>
+    </main>
+    <footer></footer>
+  </body>
 </html>
