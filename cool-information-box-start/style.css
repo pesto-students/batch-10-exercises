@@ -2,7 +2,7 @@ html {
   font-family: sans-serif;
 }
 
-div {
+/* div {
   background-color: red;
   box-shadow: 2px 2px #00000059;
   border: 1px solid red;
@@ -15,4 +15,16 @@ p {
   text-align: center;
   font-weight: bold;
   text-shadow: 1px 1px black;
+} */
+div {
+  background-image: linear-gradient(red, maroon);
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
 }
+
+div p {
+  color: #ff0000;
+  text-shadow: 1px 1px black;
+
+} 
