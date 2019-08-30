@@ -1,5 +1,84 @@
 html {
   font-family: sans-serif;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* responsive font size */
+
+
+p {
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 570px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
 }
 
 /* Your CSS below here */
+div {
+  background-image: linear-gradient(to right, #e60000, #c80000);
+  padding-left: 30px;
+  padding-right: 30px;
+  display: inline-block;
+  border: maroon 2px solid;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 6px white, inset -2px -2px 6px black, 2px 2px 6px black
+}
+
+div p {
+  color: #ff0000;
+  text-shadow: 1px 1px black;
+
+}
