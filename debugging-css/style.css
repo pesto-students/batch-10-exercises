@@ -29,24 +29,25 @@ pli {
 /* header and footer */
 
 header, footer {
-  background-colour: teal;
+  background-color: teal;
   height: 10em;
   padding: 2em;
 }
 
-h1, footer p {
+h1 {
   margin: -70px;
 }
 
 h1 {
   text-align: center;
-  padding: 0.5em 0;
+  padding: 2.5em 0;
 }
 
 /* main content */
 
 main {
   padding: 2em;
+  font-size: 1.5em;
 }
 
 main p, main li {
@@ -54,6 +55,7 @@ main p, main li {
 }
 
 img {
-  float: right
+  float: right;
   margin: 1.2em 2em;
+  position: inherit;
 }

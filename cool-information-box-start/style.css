@@ -11,13 +11,8 @@ div {
 }
 p {
   color: red;
-  /* border: 1px solid red; */
   width: 10em;
   text-align: center;
   font-weight: bold;
-  /* border-radius: 6px; */
-  /* padding: 1em; */
-  /* background-color: red; */
   text-shadow: 1px 1px black;
-  /* box-shadow: 2px 2px #00000059; */
 }
