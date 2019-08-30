@@ -6,7 +6,8 @@ html , body{
 .cool-box{
   display: inline-block;
   text-align: center;
-  padding: 10px 20px;
+  vertical-align: middle;
+  padding: 15px 25px;
   font-size: 3.5vh;
   border: 1px solid; 
   border-radius: 8px; 
