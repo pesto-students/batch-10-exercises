@@ -4,29 +4,54 @@
   <meta charset="utf-8">
   <title>Tabbed info box</title>
   <style>
-
+    section {
+      width: 42vw;
+      margin: 0 auto;
+      background-color: red;
+    }
+    ul {
+      list-style: none;
+      display: inline-flex;
+      width: inherit;
+      padding: 0px;
+    }
+    li {
+      text-align: center;
+      width: 33.33%;
+    }
+    li a {
+      color: initial;
+      text-decoration: none;
+    }
+    article {
+      color: white;
+      padding: 0em 1em;
+    }
+    article h2 {
+      font-weight: 900;
+    }
   </style>
 </head>
 <body>
 
 <section class="info-box">
   <ul>
-    <li><a href="#" class="active">Tab 1</a></li>
-    <li><a href="#">Tab 2</a></li>
+    <li onclick="displayTab('first')"><a href="#" class="active">Tab 1</a></li>
+    <li onclick="displayTab('second')"><a href="#">Tab 2</a></li>
     <li><a href="#">Tab 3</a></li>
   </ul>
   <div class="panels">
-    <article class="active-panel">
+    <article class="active-panel" id="first">
       <h2>The first tab</h2>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt metus. Donec ultrices, urna maximus consequat aliquet, dui neque eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor urna. Nulla facilisi.</p>
     </article>
-    <article>
+    <article id="second">
       <h2>The second tab</h2>
 
       <p>This tab hasn't got any Lorem Ipsum in it. But the content isn't very exciting all the same.</p>
     </article>
-    <article>
+    <article id="third">
       <h2>The third tab</h2>
 
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque turpis nibh, porttitor nec venenatis eu, pulvinar in augue. And now an ordered list: how exciting!</p>
@@ -41,7 +66,12 @@
 </section>
 
 <script>
-
+  function displayTab(id) {
+    const el = document.getElementById(id);
+    const tabs = document.getElementsByTagName('article');
+    tabs.style.display = "none";
+    el.style.display = "block";
+  }
 
 </script>
   
