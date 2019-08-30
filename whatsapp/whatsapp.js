@@ -1,8 +1,5 @@
-
-function whatsapp(...args) {
+function whatsapp(args) {
   return args;
 }
 
-export {
-  whatsapp,
-};
+export { whatsapp };
