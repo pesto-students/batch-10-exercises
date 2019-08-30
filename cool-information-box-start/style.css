@@ -1,9 +1,11 @@
 html {
   font-family: sans-serif;
   font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-
+/* responsive font size */
 
 
 p {
@@ -66,10 +68,13 @@ p {
 
 /* Your CSS below here */
 div {
-  background-image: linear-gradient(red, maroon);
-  padding-left: 15px;
-  padding-right: 15px;
+  background-image: linear-gradient(to right, #e60000, #c80000);
+  padding-left: 30px;
+  padding-right: 30px;
   display: inline-block;
+  border: maroon 2px solid;
+  border-radius: 10px;
+  box-shadow: inset 2px 2px 6px white, inset -2px -2px 6px black, 2px 2px 6px black
 }
 
 div p {
