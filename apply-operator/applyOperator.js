@@ -1,26 +1,22 @@
+import { isUndefined } from 'util';
 
-function applyOperator(...args) {
-  let result = 0;
-  if (args.length === 1) {
-    return result;
+function applyOperator(inputOp, ...numbers) {
+  if (isUndefined(inputOp)) {
+    throw new Error('Expected operator string as argument.');
   }
-  if (args[0] === '*' || args[0] === '/') {
-    result = 1;
-  }
-  for (let i = 1; i < args.length; i += 1) {
-    if (args[0] === '+') {
-      result = args[i] + result;
-    } else if (args[0] === '-') {
-      result -= args[i];
-    } else if (args[0] === '*') {
-      result *= args[i];
-    } else if (args[0] === '/') {
-      result /= args[i];
-    } else if (args[0] === '%') {
-      result %= args[i];
+  const addDefaultVal = (operator) => {
+    if (['*', '/'].includes(operator)) {
+      numbers.unshift(1);
     }
-  }
-  return result;
+    if (['+', '-'].includes(operator)) {
+      numbers.unshift(0);
+    }
+  };
+  addDefaultVal(inputOp);
+  // eslint-disable-next-line no-eval
+  const reductionFn = (accumulator, value) => eval(accumulator + inputOp + value);
+  return numbers
+    .reduce(reductionFn);
 }
 
 export {
