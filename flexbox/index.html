@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scaele=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Flexbox Practice</title>
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <header></header>
+    <header>
+      <div class="flexHeader">
+        <h1>Complete Flexbox Example</h1>
+      </div>
+    </header>
     <main>
       <div class="flexRow">
-        <div class="flexItem1">
+        <div class="flexItem1 flexItem">
           <h1>First Article</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -19,7 +24,7 @@
             Eligendi aut incidunt aliquid laudantium excepturi!
           </p>
         </div>
-        <div class="flexItem2">
+        <div class="flexItem2 flexItem">
           <h1>Second Article</h1>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus
@@ -28,12 +33,15 @@
             Eligendi aut incidunt aliquid laudantium excepturi!
           </p>
         </div>
-        <div class="flexItemBasis">
-          <button>Smile</button>
-          <button>Laugh</button>
-          <button>Wink</button>
-          <button>Shrug</button>
-          <button>Blush</button>
+        <div class="flexItem3 flexItem">
+          <div class="buttonRow">
+            <button class="buttonFlexItem">Smile</button>
+            <button class="buttonFlexItem">Laugh</button>
+            <button class="buttonFlexItem">Wink</button>
+            <button class="buttonFlexItem">Shrug</button>
+            <button class="buttonFlexItem">Blush</button>
+          </div>
+
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis
             cumque esse molestias autem quibusdam iste corrupti molestiae
