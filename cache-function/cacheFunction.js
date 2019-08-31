@@ -2,12 +2,12 @@
 function cacheFunction(inputFn) {
   const cache = {};
   return (...args) => {
-    const n = args[0];
-    if (n in cache) {
-      return cache[n];
+    const input = args[0];
+    if (input in cache) {
+      return cache[input];
     }
-    const result = inputFn(n);
-    cache[n] = result;
+    const result = inputFn(input);
+    cache[input] = result;
     return result;
   };
 }
