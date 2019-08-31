@@ -1,15 +1,42 @@
+.flex {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
     position: relative;
-    display: inline-block;
+
+    flex-direction: column;
+
 }
 
 /* Bottom right text */
-.text-block {
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
+.first-text {
+
     color: black;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.second-text {
+    position: relative;
+    display: flex;
+}
+
+.second-text p {
+    background: url('./colorful-heart.png') no-repeat top center;
+    background-size: auto;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-position-y: -109px
+}
+
+p {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 4rem;
 }
