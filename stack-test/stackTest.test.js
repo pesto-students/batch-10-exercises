@@ -31,7 +31,7 @@ class Stack {
   }
 }
 
-describe('stack test', () => {
+describe("stack test", () => {
   let myStack;
   beforeEach(() => {
     myStack = new Stack();
@@ -40,10 +40,16 @@ describe('stack test', () => {
     myStack.push(3);
   });
 
-  test('should push elements to stack in order', () => {
+  test("should push elements to stack in order", () => {
     const actual = myStack.items;
-    const expected = [1,2,3];
+    const expected = [1, 2, 3];
 
     expect(actual).toEqual(expected);
+  });
+  test("should pop last element in stack", () => {
+    expect(myStack.pop()).toEqual(3);
+  });
+  test("should peek into stack and return the top-most element", () => {
+    expect(myStack.peek()).toEqual(3);
   });
 });
