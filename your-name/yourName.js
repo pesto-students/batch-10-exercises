@@ -1,8 +1,5 @@
-
-function yourName(...args) {
-  return args;
+function yourName() {
+  return 'Prasham Ashesh';
 }
 
-export {
-  yourName,
-};
+export { yourName };
