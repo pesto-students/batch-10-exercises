@@ -1,8 +1,7 @@
-
-function objectPairs(...args) {
-  return args;
+function objectPairs(obj) {
+  return Object.keys(obj).map(key => {
+    return [key, obj[key]];
+  });
 }
 
-export {
-  objectPairs,
-};
+export { objectPairs };

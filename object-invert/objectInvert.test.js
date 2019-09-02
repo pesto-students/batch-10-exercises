@@ -3,7 +3,7 @@ import { objectInvert } from './objectInvert';
 describe('objectInvert', () => {
   it('should return an object', () => {
     const obj = {
-      hi: 'hi',
+      hi: 'hi'
     };
     const result = objectInvert(obj);
     expect(Array.isArray(result)).toBe(false);
@@ -13,7 +13,7 @@ describe('objectInvert', () => {
     const obj = {
       x: 'hi',
       y: 'sup',
-      z: 'yo',
+      z: 'yo'
     };
     const result = objectInvert(obj);
     expect(result).toEqual({ hi: 'x', sup: 'y', yo: 'z' });
