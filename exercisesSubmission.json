@@ -3,7 +3,7 @@
     "segmentName": "segment-2",
     "exercises": {
         "reverse-string": {
-            "completed": false
+            "completed": true
         },
         "is-palindrome": {
             "completed": true
@@ -15,16 +15,16 @@
             "completed": true
         },
         "telephone-check": {
-            "completed": false
+            "completed": true
         },
         "rot13": {
-            "completed": false
+            "completed": true
         },
         "get-index-to-ins": {
             "completed": true
         },
         "repeat-string-num-times": {
-            "completed": false
+            "completed": true
         },
         "binary-agent": {
             "completed": true
@@ -33,10 +33,10 @@
             "completed": true
         },
         "sum-all": {
-            "completed": false
+            "completed": true
         },
         "pairwise": {
-            "completed": false
+            "completed": true
         },
         "convert-to-roman": {
             "completed": true
@@ -45,10 +45,10 @@
             "completed": true
         },
         "steamroll-array": {
-            "completed": false
+            "completed": true
         },
         "rotated-string": {
-            "completed": false
+            "completed": true
         }
     }
 }

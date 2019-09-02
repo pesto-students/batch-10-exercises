@@ -1,8 +1,6 @@
-
-function telephoneCheck(...args) {
-  return args;
+function telephoneCheck(str) {
+  const regex = /^(1\s?)?(\(\d{3}\)|\d{3})[\s\-]?\d{3}[\s\-]?\d{4}$/;
+  return str.match(regex) ? true : false;
 }
 
-export {
-  telephoneCheck,
-};
+export { telephoneCheck };

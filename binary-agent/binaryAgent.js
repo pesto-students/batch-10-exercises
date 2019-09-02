@@ -1,12 +1,10 @@
 function binaryAgent(binaryString) {
-  const arrayOfWordsInBinary = binaryString.split(/\s/)
-  const arrayOfWordsInEnglish = arrayOfWordsInBinary.map(function (word) {
-    return String.fromCharCode(parseInt(word, 2));
-  });
-  const englishString = arrayOfWordsInEnglish.join("")
+  const WordsInBinary = binaryString.split(/\s/);
+  const WordsInEnglish = WordsInBinary.map(word =>
+    String.fromCharCode(parseInt(word, 2))
+  );
+  const englishString = WordsInEnglish.join('');
   return englishString;
 }
 
-export {
-  binaryAgent,
-};
+export { binaryAgent };
