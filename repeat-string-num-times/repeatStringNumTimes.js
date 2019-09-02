@@ -1,8 +1,8 @@
-
-function repeatStringNumTimes(...args) {
-  return args;
+function repeatStringNumTimes(strToRepeat, noOfTimes) {
+  if (noOfTimes < 0) {
+    return '';
+  }
+  return strToRepeat.repeat(noOfTimes);
 }
 
-export {
-  repeatStringNumTimes,
-};
+export { repeatStringNumTimes };
