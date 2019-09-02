@@ -5,7 +5,7 @@ describe('User', () => {
     const me = new User('Pesto', 'iamabeast');
     expect(me).toEqual({
       username: 'Pesto',
-      password: 'iamabeast',
+      password: 'iamabeast'
     });
   });
 

@@ -1,8 +1,13 @@
+function objectInvert(obj) {
+  const newObj = {};
 
-function objectInvert(...args) {
-  return args;
+  for (const prop in obj) {
+    if (obj.hasOwnProperty(prop)) {
+      newObj[obj[prop]] = prop;
+    }
+  }
+
+  return newObj;
 }
 
-export {
-  objectInvert,
-};
+export { objectInvert };
