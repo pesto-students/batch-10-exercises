@@ -1,4 +1,6 @@
-import { applyOperator } from './applyOperator';
+import {
+  applyOperator
+} from './applyOperator';
 
 describe('applyOperator', () => {
   test('should return 0 when no operands are specified', () => {
@@ -9,7 +11,7 @@ describe('applyOperator', () => {
     expect(applyOperator('+', 1, 2, 3, 4, 5)).toEqual(15);
     expect(applyOperator('+', 1)).toEqual(1);
 
-    expect(applyOperator('-', 1, 2, 3, 4, 5)).toEqual(-15);
+    expect(applyOperator('-', 1, 2, 3, 4, 5)).toEqual(-13);
     expect(applyOperator('-', 1)).toEqual(-1);
 
     expect(applyOperator('*', 1, 2, 3, 4, 5)).toEqual(120);
@@ -23,6 +25,6 @@ describe('applyOperator', () => {
   });
 
   test('should throw error when operator is not specified', () => {
-    expect(() => applyOperator()).toThrowError();
+    expect(() => applyOperator()).toThrowError("operator is not specified");
   });
 });
