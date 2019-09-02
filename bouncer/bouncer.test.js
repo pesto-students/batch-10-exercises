@@ -1,4 +1,6 @@
-import { bouncer } from './bouncer';
+import {
+  bouncer
+} from './bouncer';
 
 describe('bouncer', () => {
   test('should remove all falsy values from an array.', () => {

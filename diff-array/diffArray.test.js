@@ -1,4 +1,6 @@
-import { diffArray } from './diffArray';
+import {
+  diffArray,
+} from './diffArray';
 
 describe('diffArray', () => {
   test('should return an array', () => {
