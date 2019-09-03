@@ -1,12 +1,20 @@
-<!-- Write a JavaScript function that accept row, column, (to identify a particular cell)
-  and a string to update the content of that cell. -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Change the content of a cell</title>
+
+  <script>
+    function changeContent(){
+      const row = parseInt(this.changeContentForm.row.value);
+      const column = parseInt(this.changeContentForm.column.value);
+      const content = this.changeContentForm.content.value;
+      this.myTable.rows[row-1].cells[column-1].innerHTML = content;
+    }
+  </script>
 </head>
 
 <body>
@@ -24,7 +32,18 @@
       <td>Row3 cell2</td>
     </tr>
   </table>
-  <form>
+  <br>
+  <h2>Select Row, Column and add custom content to see content change in action. </h2>
+  <form id="changeContentForm">
+    <label for="row">Row : </label>
+    <input type="number" name="row" min="1" , max="3">
+    <br><br>
+    <label for="column">Column : </label>
+    <input type="number" name="column" min="1" max="2">
+    <br><br>
+    <label for="content">Content :</label>
+    <input type="text" name="content">
+    <br><br>
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
 </body>
