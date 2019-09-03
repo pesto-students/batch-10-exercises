@@ -5,8 +5,17 @@
 <html>
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset='utf-8' />
   <title>Change the content of a cell</title>
+  <script>
+    function changeContent() {
+      const changeRow = document.querySelector("select[id='row']").value;
+      const changeCol = document.querySelector("select#col").value;
+      const text = document.querySelector("input[type='text']").value;
+      const selectedTr = document.getElementsByTagName("tr")[changeRow - 1].children[changeCol - 1];
+      selectedTr.textContent = text;
+    }
+  </script>
 </head>
 
 <body>
@@ -25,6 +34,19 @@
     </tr>
   </table>
   <form>
+    <label for="row">Row:</label>
+    <select name="row" id="row">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <label for="col">Col:</label>
+    <select name="col" id="col">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+    </select>
+    <label for="content">Content:</label>
+    <input type="text" name="content" id="content" value="sample text"/>
     <input type="button" onclick="changeContent()" value="Change content">
   </form>
 </body>
