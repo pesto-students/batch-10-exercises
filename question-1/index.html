@@ -3,6 +3,7 @@
 
 <head>
   <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS DOM paragraph style</title>
 </head>
 
@@ -12,5 +13,12 @@
     <button id="jsstyle" onclick="js_style()">Style</button>
   </div>
 </body>
+<script type="text/JavaScript" >
+const js_style = () => {
+          const element = document.getElementById('jsstyle');
+          element.style.color = 'red';
+          element.style.fontSize = '24px';
+      }
+</script>
 
 </html>
