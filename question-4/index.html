@@ -1,11 +1,22 @@
-<!-- Write a JavaScript function to add rows to a table -->
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Insert row in a table</title>
+  <script>
+    function insert_Row() {
+      const currentRows = this.sampleTable.rows.length;
+      const newRow = this.sampleTable.insertRow();
+      const newCell1 = newRow.insertCell();
+      const newCell2 = newRow.insertCell();
+      newCell1.innerHTML = `Row${currentRows + 1} cell1`;
+      newCell2.innerHTML = `Row${currentRows + 1} cell2`;
+    }
+  </script>
+
 </head>
 
 <body>
@@ -21,6 +32,7 @@
   </table>
   <br>
   <input type="button" onclick="insert_Row()" value="Insert row">
+
 </body>
 
 </html>
