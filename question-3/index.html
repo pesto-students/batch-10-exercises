@@ -6,13 +6,47 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
 
 <head>
   <meta charset=utf-8 />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">4
+  <title> Get Attributes</title>
 </head>
 
 <body>
   <p>
     <a id="w3r" type="text/html" hreflang="en-us" rel="nofollow" target="_self" href="https://pesto.tech/">Pesto</a>
   </p>
-  <button onclick="getAttributes()">Click here to get attributes value</button>
+
+  <button onclick="getAttributes()"> Click here to get attributes value </button>
+  <h1 id="H1" style="visibility: hidden">Extracted Information</h1>
+  <table id="information" border="1" style="visibility: hidden">
+
+  </table>
+
+  <script type="text/javascript" >
+    const getAttributes = () => {
+      const Link = document.getElementById('w3r');
+      const Attributes = {
+          HREF : Link.getAttribute('href'),
+          REL  : Link.getAttribute('rel'),
+          TARGET : Link.getAttribute('target'),
+          HREF_LANG : Link.getAttribute('hreflang'),
+          TYPE : Link.getAttribute('type'), 
+      }   
+      let List = [];
+      for(key of Object.keys(Attributes)){
+         List.push(`<tr>
+                        <td align="right">${key} : </td>
+                        <td align="left"> ${Attributes[key]} </td>
+                    </tr>`);
+      }
+      const Info = List.join('');
+      document.getElementById('information').innerHTML = Info;
+      document.getElementById('H1').style.visibility = 'visible';
+      document.getElementById('information').style.visibility = 'visible';
+
+      
+
+    }
+  </script>
 </body>
 
 </html>
