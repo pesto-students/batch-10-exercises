@@ -1,16 +1,22 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset=utf-8 />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>JS DOM paragraph style</title>
+  <script>
+    function applyBoldBlueStyle(){
+      const paragraph = document.getElementById('text');
+      paragraph.style.color = 'blue';
+      paragraph.style.fontWeight = 'bold';
+    }
+  </script>
 </head>
-
 <body>
   <p id='text'>JavaScript Exercises</p>
   <div>
-    <button id="jsstyle" onclick="js_style()">Style</button>
+    <button id="jsstyle" onclick="applyBoldBlueStyle()">Apply Bold Blue Style to Paragraph</button>
   </div>
 </body>
-
 </html>
