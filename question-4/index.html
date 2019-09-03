@@ -4,8 +4,22 @@
 <html>
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset="utf-8" />
   <title>Insert row in a table</title>
+  <script>
+    let rowCount = 2;
+    function insert_Row() {
+      rowCount += 1;
+      const newR = document.createElement("tr");
+      for (let index = 0; index < 2; index++) {
+        const td = document.createElement("td");
+        const textNode = document.createTextNode(`Row${rowCount} cell${index + 1}`);
+        td.appendChild(textNode);               
+        newR.appendChild(td);
+      }
+      document.querySelector("table").appendChild(newR);
+  }
+  </script>
 </head>
 
 <body>

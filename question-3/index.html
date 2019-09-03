@@ -5,7 +5,15 @@ get the value of the href, hreflang, rel, target, and type attributes of the spe
 <html>
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset="utf-8" />
+  <title>question 3</title>
+  <script>
+    function getAttributes() {
+      const el = document.querySelector("a#w3r");
+      const {href, hreflang, rel, target, type} = el;
+      console.log(rel);
+    }
+  </script>
 </head>
 
 <body>

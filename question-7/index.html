@@ -4,19 +4,26 @@
 <html>
 
 <head>
-  <meta charset=utf-8 />
+  <meta charset="utf-8" />
   <title>Remove items from a dropdown list</title>
+  <script>
+    function removeColor() {
+      const selectEl = document.querySelector("select");
+      selectEl.removeChild(selectEl[selectEl.selectedIndex]);
+    }
+  </script>
 </head>
 
 <body>
   <form>
-    <select id="colorSelect">
+    <label for="color">Remove Color:</label>
+    <select name="color" id="colorSelect">
       <option>Red</option>
       <option>Green</option>
       <option>White</option>
       <option>Black</option>
     </select>
-    <input type="button" onclick="removecolor()" value="Select and Remove">
+    <input type="button" onclick="removeColor()" value="Select and Remove">
   </form>
 </body>
 
