@@ -18,7 +18,7 @@ Further reading on task #2: https://facebook.github.io/react/tips/if-else-in-JSX
 */
 
 class FavoriteMovie extends Component {
-/*
+  /*
   By default `this.state` is `null`. In `render` we are referring to
   a specific element from the `state` object - `this.state.movie`.
   If we don't set an initial state, we will get an error. It's impossible to fetch
@@ -34,29 +34,35 @@ class FavoriteMovie extends Component {
     this.state = { movie: '' };
 
     // Warning! If we don't bind this method - we would not be able to update state.
+    this.onMovieChange = this.onMovieChange.bind(this);
   }
 
-  /*
-    `event` is the only argument passed to that method. It will be an event
-    object thrown by React on actions like `click`, `change` etc.
+ 
+  componentDidMount() {
+    const movieName =
+      this.state.movie === ''
+        ? 'Please enter your favourite movie!'
+        : this.state.movie;
+    this.setState({ movie: movieName });
+  }
 
-    You need to correct the call of `setState` method. Just try to set
-    the `movie` field to the value passed in event.
-
-    Hint: use `console.log` to check `event.target`. You will find text entered to the input there.
-  */
-
-  /* eslint-disable no-unused-vars, react/no-unused-state */
   onMovieChange(event) {
-    // Huh... There's something wrong here...
-    this.setState({ badAttribute: 'ChangeME!' });
+    this.setState({
+      movie:
+        event.target.value === ''
+          ? 'Please enter your favourite movie!'
+          : event.target.value
+    });
   }
 
   render() {
     return (
       <div>
-        <p>My favorite movie is <span style={{ color: 'blue' }}>{this.state.movie}</span></p>
-        <input type="text" name="name" onChange={this.onMovieChange} />
+        <p>
+          My favorite movie is{' '}
+          <span style={{ color: 'blue' }}>{this.state.movie}</span>
+        </p>
+        <input type='text' name='name' onChange={this.onMovieChange} />
       </div>
     );
   }

@@ -23,7 +23,7 @@ class GroceryList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      groceries: [{ name: 'Apples' }, { name: 'KitKat' }, { name: 'Red Bull' }],
+      groceries: [{ name: 'Apples' }, { name: 'KitKat' }, { name: 'Red Bull' }]
     };
   }
 
@@ -37,14 +37,40 @@ class GroceryList extends React.Component {
       Below you can see how to pass properties to child components.
       We have defined a `grocery` property for each `GroceryListItem`.
     */
-    const groceriesComponents = groceries.map(item => ( // eslint-disable-line no-unused-vars
-      <GroceryListItem grocery={item} />
-    ));
+
+    const groceriesComponents = groceries.map((
+      item // eslint-disable-line no-unused-vars
+    ) => <GroceryListItem grocery={item} />);
     // Hint: Don't forget about putting items into `ul`
     return (
       <div>
-        Put your code here
+        <ul>{groceriesComponents}</ul>
+        <GroceryForm></GroceryForm>
       </div>
+    );
+  }
+}
+
+class GroceryForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    const groceries = this.props.state.groceries;
+    this.setState({ groceries: [...groceries, event.target.value] });
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+          Grocery:
+          <input type='text' onChange={this.handleChange} />
+        </label>
+        <input type='submit' value='Submit' />
+      </form>
     );
   }
 }
@@ -56,13 +82,8 @@ class GroceryListItem extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
-    return (
-      <li>
-        Put your code here.
-      </li>
-    );
+    return <li>{this.props.grocery.name}</li>;
   }
 }
 
