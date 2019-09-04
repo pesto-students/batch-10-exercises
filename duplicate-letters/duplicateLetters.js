@@ -1,5 +1,5 @@
 
-function duplicateLetters(...args) {
+function duplicateLetters(word) {
   return args;
 }
 
