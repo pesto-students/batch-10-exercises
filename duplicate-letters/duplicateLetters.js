@@ -1,5 +1,6 @@
 
 function duplicateLetters(word) {
+  const test =" Just Testing My Git Problem";
   const letters = word.split('');
   let Occurance = [];
   const x = letters.map(( letter ) => {
