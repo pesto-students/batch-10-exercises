@@ -1,26 +1,38 @@
 import React, { Component } from 'react';
 
-/*
-* Exercise 2:
-*
-*  Create a `StopWatch` component that has a Start/Stop button and a Clear
-*  button.
-*
-*  Pressing Start will start a timer and the lapsed time in
-*  milliseconds should be displayed above the buttons.
-*
-*  Once started the Start button should change to Stop. Clicking Stop
-*  will stop the timer but lapsed time will be preserved.
-*
-*  Clicking Start again will resume the timer from where it left off.
-*
-*  Clicking Clear will stop the timer if it's running and reset the lapsed time to 0.
-*/
-
 class StopWatch extends Component {
+  state = {
+    stopWatchStart: false,
+    elapsedTime: 0
+  };
+
+  toggleTimer = () => {
+    this.setState({ stopWatchStart: this.state.stopWatchStart === false });
+  };
+
+  startTimer = () => {
+    setTimeout(() => {
+      this.setState({ elapsedTime: this.state.elapsedTime + 1 });
+    }, 1);
+  };
+
+  updateButtonText() {
+    return this.state.stopWatchStart ? 'Stop' : 'Start';
+  }
+  componentDidUpdate() {
+    if (this.state.stopWatchStart) {
+      this.startTimer();
+    }
+  }
+
   render() {
     return (
-      <div>Stop Watch</div>
+      <div>
+        <p>{this.state.elapsedTime} milliseconds</p>
+        <button onClick={this.toggleTimer}>
+          {this.state.stopWatchStart ? 'Stop' : 'Start'}
+        </button>
+      </div>
     );
   }
 }
