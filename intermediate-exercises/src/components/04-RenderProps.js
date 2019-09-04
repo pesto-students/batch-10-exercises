@@ -1,29 +1,3 @@
-/**
-  Exercise:
-
-  - Refactor App by creating a new component named `<GeoPosition>`
-  - <GeoPosition> should use a child render callback that passes
-    to <App> the latitude and longitude state
-  - When you're done, <App> should no longer have anything but
-    a render method
-
-  Part 2:
-  - Now create a <GeoAddress> component that also uses a render
-    callback with the current address. You will use
-    `getAddressFromCoords(latitude, longitude)` to get the
-    address, it returns a promise.
-  - You should be able to compose <GeoPosition> and <GeoAddress>
-    beneath it to naturally compose both the UI and the state
-    needed to render it
-  - Make sure <GeoAddress> supports the user moving positions
-
-  There is an image of the end result of this exercise in the root of this directory
-  by the name - `render_props.png`. Good luck!
-
-  NOTE: It is important to do this exercise using render props.
-  https://reactjs.org/docs/render-props.html
- */
-
 /* eslint-disable react/no-multi-comp */
 
 import React from 'react';
@@ -32,6 +6,14 @@ import React from 'react';
 // import getAddressFromCoords from './utils/getAddressFromCoords';
 
 class App extends React.Component {
+  render() {
+    return (
+      <GeoPosition />
+    );
+  }
+}
+
+class GeoPosition extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -68,18 +50,26 @@ class App extends React.Component {
       <div>
         <h1>Geolocation</h1>
         {this.state.error ? (
-          <div>Error: {this.state.error.message}</div>
+          <Error message={this.state.error.message} />
         ) : (
-          <dl>
-            <dt>Latitude</dt>
-            <dd>{this.state.coords.latitude || <p>create a loader and show here...</p>}</dd>
-            <dt>Longitude</dt>
-            <dd>{this.state.coords.longitude || <p>create a loader and show here...</p>}</dd>
-          </dl>
-        )}
+            <dl>
+              <dt>Latitude</dt>
+              <dd>{this.state.coords.latitude || <Loader name="latitude" />}</dd>
+              <dt>Longitude</dt>
+              <dd>{this.state.coords.longitude || <Loader name="longitude" />}</dd>
+            </dl>
+          )}
       </div>
     );
   }
+}
+
+function Error(props) {
+  return (<div>Error : {props.message}</div>);
+}
+
+function Loader(props) {
+  return (<p>Fetching User {props.name}</p>);
 }
 
 export default App;
