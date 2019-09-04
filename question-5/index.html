@@ -1,32 +1,53 @@
-<!-- Write a JavaScript function that accept row, column, (to identify a particular cell)
-  and a string to update the content of that cell. -->
-
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset=utf-8 />
-  <title>Change the content of a cell</title>
-</head>
-
-<body>
-  <table id="myTable" border="1">
-    <tr>
-      <td>Row1 cell1</td>
-      <td>Row1 cell2</td>
-    </tr>
-    <tr>
-      <td>Row2 cell1</td>
-      <td>Row2 cell2</td>
-    </tr>
-    <tr>
-      <td>Row3 cell1</td>
-      <td>Row3 cell2</td>
-    </tr>
-  </table>
-  <form>
-    <input type="button" onclick="changeContent()" value="Change content">
-  </form>
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Change the content of a cell | Q5</title>
+    <style>
+      #changeContentForm{
+        max-width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <table id="contentTable" border="1">
+        <tr>
+          <td>Row1 cell1</td>
+          <td>Row1 cell2</td>
+        </tr>
+        <tr>
+          <td>Row2 cell1</td>
+          <td>Row2 cell2</td>
+        </tr>
+        <tr>
+          <td>Row3 cell1</td>
+          <td>Row3 cell2</td>
+        </tr>
+      </table>
+      <br/>
+      <form id="changeContentForm">
+        <fieldset>
+          <legend>Change Content</legend>
+          <label for="tableRow">Enter Row:</label><br />
+          <input type="number" name="tableRow" required="true" /><br />
+          <label for="tableCol">Enter Col:</label><br />
+          <input type="number" name="tableCol" required="true" /><br />
+          <label for="newContent">Change Content to :</label><br />
+          <input type="text" name="newContent" /><br /><br />
+          <input
+            type="button"
+            onclick="changeContent()"
+            value="Change content"
+          />
+        </fieldset>
+      </form>
+      <p class="logMessage"></p>
+    </main>
+    <footer></footer>
+    <script src="./question5.js"></script>
+  </body>
 </html>
