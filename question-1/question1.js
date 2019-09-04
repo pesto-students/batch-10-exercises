@@ -1,8 +1,9 @@
-
-function question1(...args) {
-  return args;
+function js_style() {
+  let textColor = document.getElementById("text").style.color;
+  if (textColor == "red") {
+    textColor = "green";
+  } else {
+    textColor = "red";
+  }
+  document.getElementById("text").style.color = textColor;
 }
-
-export {
-  question1,
-};

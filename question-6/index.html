@@ -1,25 +1,37 @@
 <!-- Write a JavaScript function that creates a table, accept row, column numbers from the
   user, and input row-column number as content (e.g. Row-0 Column-0) of a cell. -->
-
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset=utf-8 />
-  <title>Change the content of a cell</title>
-  <style type="text/css">
-    body {
-      margin: 30px;
-    }
-  </style>
-</head>
-
-<body>
-  <table id="myTable" border="1">
-  </table>
-  <form>
-    <input type="button" onclick="createTable()" value="Create the table">
-  </form>
-</body>
-
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Create Table | Q6</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <form id="createTableForm">
+        <fieldset>
+          <legend>Change Content</legend>
+          <label for="tableRow">Enter Row:</label><br />
+          <input type="number" name="tableRow" required="true" /><br />
+          <label for="tableCol">Enter Col:</label><br />
+          <input type="number" name="tableCol" required="true" /><br />
+          <br />
+          <input
+            type="button"
+            onclick="createTable()"
+            value="Create the table"
+          />
+        </fieldset>
+      </form>
+      <p class="messageLog"></p>
+      <table id="newTable" border="1">
+        <tbody></tbody>
+      </table>
+    </main>
+    <footer></footer>
+    <script src="./question6.js"></script>
+  </body>
 </html>
