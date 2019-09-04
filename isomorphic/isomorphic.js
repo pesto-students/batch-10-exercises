@@ -1,6 +1,6 @@
 
 function isomorphic(...args) {
-  return args;
+  return args; 
 }
 
 export {
