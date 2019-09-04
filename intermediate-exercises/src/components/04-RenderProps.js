@@ -70,12 +70,17 @@ class App extends React.Component {
         {this.state.error ? (
           <div>Error: {this.state.error.message}</div>
         ) : (
+          <div>
+          <h2>Geo Position</h2>
           <dl>
             <dt>Latitude</dt>
             <dd>{this.state.coords.latitude || <p>create a loader and show here...</p>}</dd>
             <dt>Longitude</dt>
             <dd>{this.state.coords.longitude || <p>create a loader and show here...</p>}</dd>
           </dl>
+          <h2>Geo Address Composition</h2>
+          <p>[[Address]]</p>
+          </div>
         )}
       </div>
     );

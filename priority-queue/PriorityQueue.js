@@ -1,5 +1,5 @@
 
-function priorityQueue(...args) {
+function priorityQueue(args) {
   return args;
 }
 
