@@ -1,14 +1,13 @@
 import React from "react";
 
 import "./App.css";
-import GitRepoForm from "./screens/GitRepoForm";
+import GitRepoForm from "./components/GitRepoForm";
 
 const App = () => {
   return (
     <div className="App">
-      <h1>App</h1>
-      <br/>
-      <GitRepoForm/>
+      <h1>Get Repo Form</h1>
+      <GitRepoForm />
     </div>
   );
 };

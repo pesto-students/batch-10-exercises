@@ -16,7 +16,6 @@ export default function GitRepoForm() {
         .get(`https://api.github.com/users/${gitUsername}/repos`)
         .then(response => {
           setGitRepos(filterGitApiResponse(response.data));
-          console.log(filterGitApiResponse(response.data));
         })
         .catch(error => {
           setGitRepos([]);
@@ -27,8 +26,8 @@ export default function GitRepoForm() {
     }
   };
   return (
-    <div>
-      <form className="GithubRepoForm">
+    <div className="GithubRepoContainer">
+      <form className="GithubRepoForm" onSubmit={e => e.preventDefault()}>
         <fieldset>
           <legend>Fetch Github Repos</legend>
           <label htmlFor="gitUsername"></label>
@@ -38,16 +37,18 @@ export default function GitRepoForm() {
             value={gitUsername}
             onChange={e => setGitUsername(e.target.value)}
           />
-          <input
-            type="submit"
-            onSubmit={e => {
+          <button
+            type="button"
+            onClick={e => {
               e.preventDefault();
               getGitRepos();
             }}
-          />
+          >
+            Fetch Repo
+          </button>
         </fieldset>
       </form>
-      <GitRepoList />
+      <GitRepoList gitRepos={gitRepos} />
     </div>
   );
 }

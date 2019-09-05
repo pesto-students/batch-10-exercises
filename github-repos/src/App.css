@@ -1,3 +1,21 @@
-.App{
-    text-align: center;
+.App {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+.GithubRepoContainer {
+  display: flex;
+  flex-direction: column;
+}
+.GithubRepoForm {
+  display: flex;
+  justify-content: left baseline;
+  max-width: 300px;
+}
+.GitRepoList {
+  display: flex;
+  justify-content: left baseline;
+  flex-direction: column;
+}
+.GitRepoItem {
 }
