@@ -13,14 +13,15 @@ function withMouse(Component) {
     constructor(props) {
       super(props);
       this.state = {
-        mouse : {
+        mouse: {
           x: 0,
           y: 0,
         },
       };
     }
     render() {
-      return <Component mouse={this.state.mouse} />
+      // eslint-disable-next-line react/jsx-filename-extension
+      return <Component mouse={this.state.mouse} />;
     }
   };
 }
@@ -28,8 +29,6 @@ function withMouse(Component) {
 class App extends React.Component {
   render() {
     const { mouse } = this.props;
-    console.log(mouse);
-
     return (
       <div className="container">
         {mouse ? (
