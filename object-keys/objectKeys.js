@@ -1,6 +1,6 @@
 
-function objectKeys(...args) {
-  return args;
+function objectKeys(inputObj) {
+  return Object.getOwnPropertyNames(inputObj);
 }
 
 export {
