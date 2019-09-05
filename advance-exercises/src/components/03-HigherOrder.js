@@ -9,12 +9,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function withMouse(Component) {
-  return Component;
+  return class HOC extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        mouse : {
+          x: 0,
+          y: 0,
+        },
+      };
+    }
+    render() {
+      return <Component mouse={this.state.mouse} />
+    }
+  };
 }
 
 class App extends React.Component {
   render() {
     const { mouse } = this.props;
+    console.log(mouse);
 
     return (
       <div className="container">
