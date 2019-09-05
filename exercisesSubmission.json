@@ -24,7 +24,7 @@
             "completed": false
         },
         "repeat-string-num-times": {
-            "completed": false
+            "completed": true
         },
         "binary-agent": {
             "completed": true
