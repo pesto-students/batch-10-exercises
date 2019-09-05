@@ -1,6 +1,9 @@
 
-function isOdd(...args) {
-  return args;
+function isOdd(number) {
+  if(number % 2 == 0){
+    return false;
+  }
+  return true;
 }
 
 export {
