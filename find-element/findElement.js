@@ -1,8 +1,5 @@
-
-function findElement(...args) {
-  return args;
+function findElement(inputArr, findFunction) {
+  return inputArr.find(findFunction);
 }
 
-export {
-  findElement,
-};
+export { findElement };
