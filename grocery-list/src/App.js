@@ -14,6 +14,10 @@ const App = () => {
         deleteItem={item => {
           setItems(items.filter(i => i !== item));
         }}
+//         editItem={setItems(items.map(i, index)=>{
+// i[index]
+//         })}
+      }
       ></GroceryList>
       <HandleItems
         handleSubmit={item => {
