@@ -7,12 +7,17 @@ const ListItem = props => {
   const handleClick = () => {
     setBought(!bought);
   };
+
+  const handleXClick = () => {
+    props.handleXClick(props.name);
+  };
+
   return (
     <li>
       <span style={{ color: color }} onClick={handleClick}>
         {props.name}{' '}
       </span>
-      <span onClick={props.deleteItem}>X</span>
+      <span onClick={handleXClick}>X</span>
     </li>
   );
 };

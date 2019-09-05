@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import GroceryList from './components/GroceryList';
-import InputItem from './components/InputItem';
+import HandleItems from './components/HandleItems';
 // import Button from './components/Button';
 
 import './App.css';
@@ -12,11 +12,10 @@ const App = () => {
       <GroceryList
         items={items}
         deleteItem={item => {
-          console.log(item);
           setItems(items.filter(i => i !== item));
         }}
       ></GroceryList>
-      <InputItem
+      <HandleItems
         handleSubmit={item => {
           setItems([...items, item]);
         }}

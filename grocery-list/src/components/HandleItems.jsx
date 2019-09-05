@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const InputItem = props => {
+const HandleItems = props => {
   const [value, setValue] = useState('');
 
   const handleSubmit = e => {
@@ -34,4 +34,4 @@ const InputItem = props => {
   );
 };
 
-export default InputItem;
+export default HandleItems;
