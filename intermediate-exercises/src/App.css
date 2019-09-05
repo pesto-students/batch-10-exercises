@@ -24,3 +24,20 @@ ul {
   list-style: none;
   color: black;
 }
+
+.stopWatch p {
+  color: grey;
+  font-size: 15px;
+  padding: 0px;
+}
+.stopWatch time{
+  font-weight: bolder;
+  font-size: 50px;
+  border: 0.5px lightgray solid;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.stopWatchButton {
+  margin: 10px;
+}
