@@ -1,7 +1,6 @@
 /*
   Q1:
   Implement a radio group form control with the API found in <CompoundComponents> (Line 69).
-
   - Clicking a <RadioOption> should update the value of <RadioGroup>
   - The selected <RadioOption> should pass the correct value to its <RadioIcon>
   - The `defaultValue` should be set on first render.
