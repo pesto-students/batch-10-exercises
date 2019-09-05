@@ -1,4 +1,3 @@
-
 function advanceExercises(...args) {
   return args;
 }
