@@ -1,4 +1,5 @@
-<!-- Write a JavaScript program to highlight the bold words of the following paragraph, on mouse over a certain link. Go to the editor -->
+<!-- Write a JavaScript program to highlight the bold words of the following paragraph, 
+  on mouse over a certain link. Go to the editor -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,10 +9,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <script>
+    function onHover() {
+      const el = document.querySelector("a");
+      el.style.fontWeight = "bold";
+    }
+    function onMouseOut() {
+      const el = document.querySelector("a");
+      el.style.fontWeight = "normal";
+    }
+  </script>
 </head>
 
 <body>
-
+  <p>some content <a href="#" onmouseover="onHover()" onmouseout="onMouseOut()">bold</a></p>
 </body>
 
 </html>
