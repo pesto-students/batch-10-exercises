@@ -1,0 +1,8 @@
+ul {
+    display: inline-block;
+}
+
+li {
+    cursor: pointer;
+
+}
