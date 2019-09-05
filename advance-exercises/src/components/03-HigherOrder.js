@@ -13,15 +13,28 @@ function withMouse(Component) {
     constructor(props) {
       super(props);
       this.state = {
-        mouse: {
-          x: 0,
-          y: 0,
-        },
+        x: 0,
+        y: 0,
       };
+      this.onMChange = this.onMChange.bind(this);
+    }
+    componentDidMount() {
+      this.onChange
+    }
+    onMChange(e) {
+      console.log(e);
+      this.setState({
+        x: e.clientX,
+        y: e.clientY,
+      });
     }
     render() {
       // eslint-disable-next-line react/jsx-filename-extension
-      return <Component mouse={this.state.mouse} />;
+      return (
+        <div onMouseMove={this.onMChange}>
+          <Component mouse={this.state}/>
+        </div>
+      );
     }
   };
 }
