@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class FavoriteMovie extends Component {
   constructor(props) {
     super(props);
-    this.state = { movie: 'Hey there. Enter your favorite movie.' };
+    this.state = { movie: '' };
     this.onMovieChange = this.onMovieChange.bind(this);
   }
 
@@ -11,7 +11,7 @@ class FavoriteMovie extends Component {
   onMovieChange(event) {
     const input = event.target;
     this.setState({
-      movie: input.value.length > 0 ? input.value : 'Hey there. Enter your favorite movie.',
+      movie: input.value,
     });
   }
 
@@ -20,14 +20,23 @@ class FavoriteMovie extends Component {
     return (
       // eslint-disable-next-line react/jsx-filename-extension
       <div>
-        <p>
-          My favorite movie is
-          <span style={{ color: 'blue' }}>{movie}</span>
-        </p>
+        {(movie === '')
+          ?
+          <p>
+            Hey there. Enter your favorite movie.
+          </p>
+          :
+          <p>
+            My favorite movie is
+            <span style={{ color: 'blue' }}>
+            {movie}
+            </span>
+          </p>
+        }
         <form>
           <label htmlFor="movie">
-            <input type="text" id="user-movie" name="movie" onChange={this.onMovieChange} />
             movie:
+            <input type="text" id="user-movie" name="movie" onChange={this.onMovieChange} />
           </label>
         </form>
       </div>
