@@ -1,8 +1,11 @@
-
 function objectKeys(inputObj) {
-  return Object.getOwnPropertyNames(inputObj);
+  const keys = [];
+  for (const key in inputObj) {
+    if (inputObj.hasOwnProperty(key)) {
+      keys.push(key);
+    }
+  }
+  return keys;
 }
 
-export {
-  objectKeys,
-};
+export { objectKeys };
