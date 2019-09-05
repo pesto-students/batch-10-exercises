@@ -1,8 +1,5 @@
-
-function slasher(...args) {
-  return args;
+function slasher(inputArr, slashAt) {
+  return inputArr.slice(slashAt);
 }
 
-export {
-  slasher,
-};
+export { slasher };
