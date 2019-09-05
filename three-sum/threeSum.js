@@ -1,25 +1,39 @@
 function threeSum(numArr, targetSum) {
-  // const arrSum = arr => arr.reduce((sum, num) => sum + num);
-  try {
-    if (numArr.length < 3 || typeof targetSum !== 'number') {
+  function checkValidInputs(numArr) {
+    if (numArr.length < 3 || Number.isNaN(targetSum)) {
       throw new Error();
     }
-  } catch (e) {
-    return e;
   }
-
-  const curryAdder = a => b => c => a + b + c;
-  for (let i = 0; i < numArr.length - 2; i += 1) {
-    for (let j = i + 1; j < numArr.length - 1; j += 1) {
-      for (let k = j + 1; k < numArr.length; k += 1) {
-        if (curryAdder(numArr[i])(numArr[j])(numArr[k]) === targetSum) {
-          return [numArr[i], numArr[j], numArr[k]];
-        }
+  console.log("numArr", numArr);
+  checkValidInputs(numArr, targetSum);
+  console.log("numArr", targetSum);
+  numArr.sort((a, b) => a - b);
+  for (
+    let firstPointer = 0;
+    firstPointer < numArr.length - 2;
+    firstPointer += 1
+  ) {
+    let leftPointer = firstPointer + 1;
+    let rightPointer = numArr.length - 1;
+    while (leftPointer < rightPointer) {
+      if (
+        numArr[firstPointer] + numArr[leftPointer] + numArr[rightPointer] ===
+        targetSum
+      ) {
+        let indexArr = [firstPointer, leftPointer, rightPointer];
+        indexArr = indexArr.sort((a, b) => b - a);
+        return [numArr[indexArr[0]], numArr[indexArr[1]], numArr[indexArr[2]]];
+      } else if (
+        numArr[firstPointer] + numArr[leftPointer] + numArr[rightPointer] <
+        targetSum
+      ) {
+        l += 1;
+      } else {
+        r += 1;
       }
     }
   }
   return null;
 }
-// console.log("threeSum(1,2,3) :", threeSum(1, 2, 3));
 
 export { threeSum };
