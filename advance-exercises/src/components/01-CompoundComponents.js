@@ -21,9 +21,10 @@ import PropTypes from 'prop-types';
 
 class RadioGroup extends React.Component {
   static propTypes = {
-    // defaultValue: PropTypes.string,                UN-COMMENT THIS LINE
+    defaultValue: PropTypes.string,                
     children: PropTypes.shape().isRequired,
   };
+  
   render() {
     return (
       <div>{this.props.children}</div>
@@ -33,12 +34,13 @@ class RadioGroup extends React.Component {
 
 class RadioOption extends React.Component {
   static propTypes = {
-    // value: PropTypes.string,                       UN-COMMENT THIS LINE
+     value: PropTypes.string,                       
     children: PropTypes.shape().isRequired,
   };
 
   render() {
     return (
+
       <div>
         <RadioIcon isSelected={false} /> {this.props.children}
       </div>
@@ -74,12 +76,11 @@ class CompoundComponents extends React.Component {
     return (
       <div>
         <h1>♬ It is about time that we all turned off the radio ♫</h1>
-
-        <RadioGroup defaultValue="fm">
-          <RadioOption value="am">AM</RadioOption>
-          <RadioOption value="fm">FM</RadioOption>
+        <RadioGroup defaultValue="fm" name="Form1Radio">
+          <RadioOption value="am">AM    </RadioOption>
+          <RadioOption value="fm">FM    </RadioOption>
           <RadioOption value="tape">Tape</RadioOption>
-          <RadioOption value="aux">Aux</RadioOption>
+          <RadioOption value="aux">Aux  </RadioOption>
         </RadioGroup>
       </div>
     );

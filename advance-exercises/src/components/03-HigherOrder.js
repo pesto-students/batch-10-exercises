@@ -5,17 +5,38 @@
   to the component as props (hint: use `event.clientX` and `event.clientY`).
 
 */
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
-function withMouse(Component) {
-  return Component;
+function withMouse(CustomComponent) {
+
+  // return <Component />;
+  
+  
+  return class extends Component{
+    state = {
+      x:0,
+      y:0,
+    };
+    getCordinates ( event ){
+      console.log("worked");
+      this.setState( {x:event.screenX , y:event.screenY}) 
+    } 
+   
+    render(){
+        return (
+            <div>
+                <CustomComponent mouse={this.state.cord} onMouseMove={(e)=>{console.log(e)}} ></CustomComponent>
+            </div>
+        );
+    }
+} 
 }
 
 class App extends React.Component {
+ 
   render() {
     const { mouse } = this.props;
-
     return (
       <div className="container">
         {mouse ? (
