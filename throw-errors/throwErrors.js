@@ -1,5 +1,6 @@
 
 function throwErrors(...args) {
+  new ReferenceError('ReferenceError');
   return args;
 }
 
