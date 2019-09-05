@@ -6,7 +6,7 @@
             "completed": false
         },
         "unnest": {
-            "completed": false
+            "completed": true
         },
         "uniq": {
             "completed": false

@@ -1,6 +1,7 @@
 
-function unnest(...args) {
-  return args;
+function unnest(array) {
+  const CheckedArray = Array.from(array);
+  return CheckedArray.reduce((node, element) => node.concat(element), []);
 }
 
 export {
