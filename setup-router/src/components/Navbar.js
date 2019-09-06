@@ -14,7 +14,7 @@ export default class Navbar extends Component {
           <NavLink to="/about" activeClassName="active">About Us</NavLink>
         </li>
         <li>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact" activeClassName="active">Contact</NavLink>
         </li>
       </ul>
     );
