@@ -2,3 +2,11 @@ ul {
   list-style: none;
   padding: 0;
 }
+.AddColorButton {
+  text-decoration: none;
+  font-size: 50px;
+  font-weight: bold;
+}
+.ColorLinks {
+  text-decoration: none;
+}

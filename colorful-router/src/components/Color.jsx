@@ -5,7 +5,8 @@ import PropTypes from "prop-types";
 import "../styles/Color.css";
 
 const Color = props => {
-  const { color } = props.match.params.color;
+  const { color } = props.history.location.state;
+
   return (
     <div className="Color" style={{ backgroundColor: color.hex }}>
       <p>this is {color.name}.</p>

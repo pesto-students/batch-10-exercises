@@ -44,10 +44,13 @@ class App extends Component {
         <Route
           exact
           path="/colors/new"
-          render={props => <NewColor {...props} handleAdd={this.handleAdd} />}
+          render={props => <NewColor {...props} addColor={this.handleAdd} />}
         />
-        <Route exact path="/colors/:color" component={Color} />
-
+        <Route
+          exact
+          path="/colors/:color"
+          render={props => <Color {...props} colors={this.state.colors} />}
+        />
         <Route component={NoMatch} />
       </Switch>
     );
