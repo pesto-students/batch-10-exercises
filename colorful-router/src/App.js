@@ -13,17 +13,17 @@ class App extends Component {
       colors: [
         {
           name: 'red',
-          hex: '#FF0000',
+          hex: '#FF0000'
         },
         {
           name: 'green',
-          hex: '#00FF00',
+          hex: '#00FF00'
         },
         {
           name: 'blue',
-          hex: '#0000FF',
-        },
-      ],
+          hex: '#0000FF'
+        }
+      ]
     };
     this.handleAdd = this.handleAdd.bind(this);
   }
@@ -33,13 +33,9 @@ class App extends Component {
   }
 
   render() {
-    const colorListComponent = () => (
-      <ColorList colors={this.state.colors} />
-    );
+    const colorListComponent = () => <ColorList colors={this.state.colors} />;
 
-    return (
-      colorListComponent()
-    );
+    return colorListComponent();
   }
 }
 
