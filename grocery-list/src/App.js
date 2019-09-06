@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 import "./App.css";
 
@@ -18,6 +19,9 @@ const AddGroceryForm = ({ addToGroceryList }) => {
       </button>
     </div>
   );
+};
+AddGroceryForm.propTypes = {
+  addToGroceryList: PropTypes.array.isRequired
 };
 
 const GroceryItem = ({ item, removeItem }) => {
@@ -39,6 +43,11 @@ const GroceryItem = ({ item, removeItem }) => {
     </div>
   );
 };
+GroceryItem.propTypes = {
+  item: PropTypes.array.isRequired,
+  removeItem: PropTypes.func.isRequired
+};
+
 const GroceryList = ({ groceryList, removeItem }) => {
   return (
     <ul>
@@ -49,6 +58,10 @@ const GroceryList = ({ groceryList, removeItem }) => {
       ))}
     </ul>
   );
+};
+GroceryItem.propTypes = {
+  groceryList: PropTypes.array.isRequired,
+  removeItem: PropTypes.func.isRequired
 };
 
 const App = () => {
