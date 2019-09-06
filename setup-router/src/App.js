@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import { BrowserRouter , Switch, Route} from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Home from './components/Home';
@@ -11,10 +12,13 @@ class App extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar />
-        <Home />
-        <About />
-        <Contact />
+       
+        <BrowserRouter>
+          <Navbar />
+          <Route path='/home' component={Home} />
+          <Route path='/about-us' component={About} />
+          <Route path='/contact' component={Contact} />
+        </BrowserRouter> 
       </Fragment>
     );
   }
