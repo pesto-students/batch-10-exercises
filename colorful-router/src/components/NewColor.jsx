@@ -1,14 +1,14 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
 
-import '../styles/NewColor.css';
+import "../styles/NewColor.css";
 
 class NewColor extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
-      hex: '#ffffff',
+      name: "",
+      hex: "#ffffff"
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +21,7 @@ class NewColor extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.addColor({ ...this.state });
-    this.props.history.push('/colors');
+    this.props.history.push("/colors");
   }
 
   render() {
@@ -58,7 +58,7 @@ class NewColor extends Component {
 
 NewColor.propTypes = {
   addColor: PropTypes.func.isRequired,
-  history: PropTypes.shape().isRequired,
+  history: PropTypes.shape().isRequired
 };
 
 export default NewColor;
