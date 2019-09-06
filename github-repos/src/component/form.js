@@ -7,8 +7,9 @@ const Form = ( ) =>{
 
     const SearchForRepo = ( event ) => {
         fetch(`https://api.github.com/users/${UserName}/repos`)
-        .then(response => {
-            setRepoList(response);
+        .then(response => response.json())
+        .then(data => {
+            setRepoList(data);
         });
     }
     const handleUserNameChange = ( event ) =>{
@@ -24,7 +25,7 @@ const Form = ( ) =>{
                     value={UserName}>
             </input>
             <button type="button" onClick={SearchForRepo}>Get All Repo</button>
-            <DisplayRepoDetail  repository={repoList} />
+            <DisplayRepoDetail  repository={repoList} username={UserName} />
         </form>);
 }
  
