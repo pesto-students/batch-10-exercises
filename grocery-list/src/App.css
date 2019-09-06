@@ -1,0 +1,11 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.itemChecked {
+  color: red;
+}
+.itemUnchecked {
+  color: black;
+}
