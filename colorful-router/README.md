@@ -13,4 +13,4 @@ Here's an idea of what your app could look like:
 
 ![color app demo](./colors.gif)
 
-Good luck!
+Good luck!!
