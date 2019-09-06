@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import '../styles/App.css';
 
@@ -7,14 +7,14 @@ export default class Navbar extends Component {
   render() {
     return (
       <ul className="nav">
-        <li className="active">
-          <Link to="/">Home</Link>
+        <li>
+          <NavLink exact to="/" activeClassName="active">Home</NavLink>
         </li>
         <li>
-          <Link to="/about">About Us</Link>
+          <NavLink to="/about" activeClassName="active">About Us</NavLink>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <NavLink to="/contact">Contact</NavLink>
         </li>
       </ul>
     );
