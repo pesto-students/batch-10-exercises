@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const Pokemon = ({ pokemon }) => (
   <li className="pokemons__item">
@@ -7,7 +7,7 @@ const Pokemon = ({ pokemon }) => (
       type="button"
       className="pokemons__sprite"
       style={{
-        backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`})`,
+        backgroundImage: `url(${`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`})`
       }}
     />
     <p className="pokemons__name">{pokemon.name}</p>
@@ -15,7 +15,7 @@ const Pokemon = ({ pokemon }) => (
 );
 
 Pokemon.propTypes = {
-  pokemon: PropTypes.string.isRequired,
+  pokemon: PropTypes.string.isRequired
 };
 
 export default Pokemon;
