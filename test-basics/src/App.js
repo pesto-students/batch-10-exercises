@@ -10,9 +10,10 @@ class App extends Component {
     mainColor: 'blue',
   }
   render() {
+    const MainClassName  = this.state.mainColor; 
     return (
-      <div className="App">
-        Welcome to React
+      <div className={`App ${MainClassName}`}>
+        <h1>Welcome to React</h1>
       </div>
     );
   }
