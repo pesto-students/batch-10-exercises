@@ -1,6 +1,6 @@
 # Exercises
 
-This segment has two exercises:
+This segment has two exercise:
 
 1) ### Setting Up Router
   
