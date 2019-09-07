@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pokemon Snapshots match 1`] = `
+<li
+  className="pokemons__item"
+>
+  <button
+    className="pokemons__sprite"
+    style={
+      Object {
+        "backgroundImage": "url(https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/60.png)",
+      }
+    }
+    type="button"
+  />
+  <p
+    className="pokemons__name"
+  >
+    poliwag
+  </p>
+</li>
+`;
