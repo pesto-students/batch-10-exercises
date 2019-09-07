@@ -4,6 +4,8 @@ exports[`<App /> shallow rendering matches the snapshot 1`] = `
 <div
   className="App"
 >
-  Welcome to React
+  <h1>
+    Welcome to React
+  </h1>
 </div>
 `;
