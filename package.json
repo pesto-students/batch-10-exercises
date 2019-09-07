@@ -15,6 +15,7 @@
     "chalk": "*",
     "dotenv": "*",
     "graphql-request": "*",
+    "lint": "^0.7.0",
     "node-fetch": "*",
     "rollbar": "*",
     "slash": "*"
@@ -24,14 +25,18 @@
     "@babel/preset-env": "*",
     "babel-core": "^7.0.0-bridge",
     "babel-jest": "*",
-    "eslint": "*",
-    "eslint-config-airbnb": "*",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-config-prettier": "^6.2.0",
     "eslint-plugin-import": "*",
     "eslint-plugin-jsx-a11y": "*",
-    "eslint-plugin-react": "*",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
     "husky": "*",
     "jest": "*",
-    "lint-staged": "*"
+    "lint-staged": "*",
+    "prettier": "^1.18.2"
   },
   "husky": {
     "hooks": {
@@ -39,6 +44,8 @@
     }
   },
   "lint-staged": {
-    "!(*.test).js": ["eslint"]
+    "!(*.test).js": [
+      "eslint"
+    ]
   }
 }
