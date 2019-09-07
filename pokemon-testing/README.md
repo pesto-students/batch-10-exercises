@@ -1,6 +1,6 @@
 ## Pokemon (Testing)
 
-This exercise purely focuses on writing tests. This is a small application which uses [pokemon api](https://pokeapi.co/docsv2/) to fetch pokemon based on the search query from the user. 
+This exercise purely focuses on writing tests. This is a small application which uses [pokemon api](https://pokeapi.co/docsv2/ ) to fetch pokemon based on the search query from the user. 
 
 ### About the app
 
