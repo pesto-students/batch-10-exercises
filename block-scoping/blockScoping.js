@@ -1,6 +1,6 @@
 
-function blockScoping(...args) {
-  return args;
+function blockScoping(number) {
+  return number < 11 ? number : null;
 }
 
 export {

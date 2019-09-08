@@ -6,7 +6,7 @@
             "completed": false
         },
         "block-scoping": {
-            "completed": false
+            "completed": true
         },
         "const-immutable": {
             "completed": false
@@ -15,10 +15,10 @@
             "completed": false
         },
         "double-odd-numbers": {
-            "completed": false
+            "completed": true
         },
         "instructor": {
-            "completed": false
+            "completed": true
         },
         "join-arrays": {
             "completed": true
@@ -27,7 +27,7 @@
             "completed": false
         },
         "place-in-middle": {
-            "completed": false
+            "completed": true
         },
         "print-full-name": {
             "completed": true
@@ -36,7 +36,7 @@
             "completed": true
         },
         "template-literals": {
-            "completed": false
+            "completed": true
         },
         "template-tag-function": {
             "completed": false
