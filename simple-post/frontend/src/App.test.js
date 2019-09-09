@@ -22,7 +22,8 @@ describe('<App />', () => {
       expect(wrapper.state().getPost).toEqual(fn);
     });
     it('should not be called', () => {
-      expect(fn).toHaveBeenCalledTimes(0);
+      fn.toHaveBeenCalledTimes(0)
+      // expect(fn).toHaveBeenCalledTimes(0);
     });
     
     

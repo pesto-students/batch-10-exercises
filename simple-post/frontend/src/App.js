@@ -1,6 +1,6 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
-import Post from './components/Post';
+import Posts from './components/Posts';
 import './App.css';
 
 class App extends Component {
@@ -67,16 +67,7 @@ class App extends Component {
         <button onClick={this.handleNextClick}>
           Next
         </button>
-        <div>
-          {this.state.posts.map((post) => {
-            return (
-              <Fragment key={post.id}>
-                <Post post={post} />
-                <hr />
-              </Fragment>
-            );
-          })}
-        </div>
+        <Posts posts={this.state.posts} />
       </div>
     );
   }
