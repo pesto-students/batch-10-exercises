@@ -20,7 +20,7 @@
     git checkout day-2-segment-1
   ```
 - Do all the questions of a particular segment and make sure that all the tests pass.
-- For example, if the folder name is `your-name`, then it will contain one file `yourName.test.js`. 
+- For example, if the folder name is `your-name`, then it will contain one file `yourName.test.js`.
 - You need to create another file `yourName.js`. (**Make sure that the filename is correct.**)
 - Make the required function or class and export it. **Don't use default exports. Only named exports are allowed.**
 - Do your work and then push to the branch
@@ -29,9 +29,11 @@
     git commit -m "your commit message"
     git push origin segment-1
   ```
-- The commit message should be in the format 
+- The commit message should be in the format
+
 ```
 Complete Day 3 Segment 1
 ```
+
 - Push your code to your version of the exercise repository.
 - Make a Pull Request to the original repository. **Ensure that you are setting up the correct base.**
