@@ -1,39 +1,68 @@
-## Exercise
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-- Start the api server
-  ```
-    > cd server
-    > yarn install
-    > cd .. && yarn server
-  ```
+## Available Scripts
 
-- Client side
-  ```
-    > yarn && yarn start
-  ```
+In the project directory, you can run:
 
-- Make a get request to `http://localhost:3001/posts/:page` (api server) using the [Fetch api](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+### `npm start`
 
-- Use [Postman](https://www.getpostman.com/apps) to check the response structure. Now save the response in the component state and render the posts like this:
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-  ![Posts](./image.png)
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-- Use chrome developer tools including the console and the network tab for help if there's an error.
+### `npm test`
 
-- You can use [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store the current page number so that the `previous` and `next` buttons know which page to fetch.
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Create a React component to show a particular post using this endpoint: `http://localhost:3001/post/:id`. Particular post will have an additional attribute called `body`. (Would you need react-router?)
+### `npm run build`
 
-- Use [Indexed Db](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API) to cache the results of each post.
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-- If next time the same post is opened, use the cached post instead of making a get request to the server.
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-- In the end use your CSS skills to make the pages look presentable.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-## Quiz
+### `npm run eject`
 
-  After completing the exercise, answer the following questions.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-1) What is a preflighted request? Was the get request you sent in the exercise a simple request or a preflighted request?
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-2) What is the difference between LocalStorage and SessionStorage? Give a practical scenario where you would used one over the other and why.
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
