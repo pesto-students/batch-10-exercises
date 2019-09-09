@@ -1,17 +1,10 @@
-
-// (*)
-// Follow the instructions and fill in the blank sections.
-function User() {
-  // set a username and password property on the user object that is created
+function User(uname, pwd) {
+  this.username = uname;
+  this.password = pwd;
 }
 
-// create a method on User called `checkPassword`
-// this method should take in a string and compare it to the object's password property
-// return `true` if they match, otherwise return `false`
-User.prototype.checkPassword = function checkPassword() {
-
+User.prototype.checkPassword = function checkPassword(pwd) {
+  return pwd === this.password;
 };
 
-export {
-  User,
-};
+export { User };
