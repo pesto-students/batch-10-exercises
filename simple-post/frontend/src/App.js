@@ -1,6 +1,4 @@
 import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
 import Post from './components/Post';
 import './App.css';
 
