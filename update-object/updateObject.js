@@ -1,6 +1,6 @@
 
-function updateObject(...argss) {
-  return argss;
+function updateObject(...args) {
+  return args;
 }
 
 export {
