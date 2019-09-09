@@ -7,7 +7,7 @@
     > cd .. && yarn server
   ```
 
-- Client side
+- Client sside
   ```
     > yarn && yarn start
   ```
