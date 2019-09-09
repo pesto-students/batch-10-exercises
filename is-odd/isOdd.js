@@ -1,8 +1,5 @@
-
-function isOdd(...args) {
-  return args;
+function isOdd(num) {
+  return Math.floor(num / 2) * 2 !== num;
 }
 
-export {
-  isOdd,
-};
+export { isOdd };

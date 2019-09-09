@@ -1,8 +1,8 @@
-
-function limitFunctionCallCount(...args) {
-  return args;
+function limitFunctionCallCount(func, callCount) {
+  return function (...args) {
+    callCount -= 1;
+    return callCount > 0 ? func(...args) : null;
+  };
 }
 
-export {
-  limitFunctionCallCount,
-};
+export { limitFunctionCallCount };
