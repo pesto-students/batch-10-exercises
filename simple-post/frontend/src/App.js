@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Posts from './components/Posts';
+import Button from './components/Button';
 import './App.css';
 
 class App extends Component {
@@ -61,12 +62,8 @@ class App extends Component {
         <h2>Posts</h2>
         <hr />
         <br />
-        <button onClick={this.handlePrevClick}>
-          Previous
-        </button>
-        <button onClick={this.handleNextClick}>
-          Next
-        </button>
+        <Button text='Previous' onClick={this.handlePrevClick} />
+        <Button text='Next' onClick={this.handleNextClick} />
         <Posts posts={this.state.posts} />
       </div>
     );
