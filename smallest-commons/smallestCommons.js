@@ -1,16 +1,14 @@
 function smallestCommons(numArr) {
-  const gcd = (a, b) => {
-    if (b == 0) return a;
-    return gcd(a, b % a);
-  };
-  const lcm = () => (num1 * num2) / gcd(num1, num2);
-  const num1 = Math.min(numArr[0], numArr[1]);
-  const num2 = Math.max(numArr[0], numArr[1]);
-  let currentLcm = num1;
-  while (num1 < num2) {
-    currentLcm = lcm(currentLcm, num1);
+  const max = Math.max(...numArr);
+  const min = Math.min(...numArr);
+  let smallestCommon = max;
+  for (let i = max - 1; i >= min; i -= 1) {
+    if (smallestCommon % i) {
+      smallestCommon += max;
+      i = max;
+    }
   }
-  return currentLcm;
+  return smallestCommon;
 }
 
 export { smallestCommons };
