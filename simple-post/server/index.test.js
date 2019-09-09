@@ -59,4 +59,13 @@ describe('BASE_URL/posts/', () => {
       'No pesto-password header present. Hint: password is `darth vader`'
     );
   });
+  test('Responds with 10 posts if authenticated', async () => {
+    const response = await fetch(BASE_URL + '/posts', {
+      headers: {
+        'pesto-password': 'darth vader'
+      }
+    });
+    const json = await response.json();
+    expect(json.data.length).toBe(10);
+  });
 });
