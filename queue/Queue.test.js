@@ -45,7 +45,7 @@ describe('Queue', () => {
     const queue = new Queue();
 
     expect(queue.isEmpty()).toBeTruthy();
-
+    
     queue.enqueue(1);
 
     expect(queue.isEmpty()).toBeFalsy();
