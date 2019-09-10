@@ -1,8 +1,5 @@
-
 function csvToJson(...args) {
   return args;
 }
 
-export {
-  csvToJson,
-};
+export { csvToJson };
