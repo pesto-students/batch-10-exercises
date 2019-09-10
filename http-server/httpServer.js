@@ -1,7 +1,9 @@
+const express = require('express');
 
-function httpServer(...args) {
-  return args;
-}
+const httpServer = express();
+
+httpServer.get('/', (req, res) => res.send('Pesto Bootcamp!\n'));
+
 
 export {
   httpServer,
