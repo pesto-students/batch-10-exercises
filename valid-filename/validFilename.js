@@ -1,7 +1,8 @@
 
 function validFilename(str) {
   const reg = new RegExp('/[\W| ]+/', 'g');
-  if (reg.test(str)) {
+  console.log(str.match(reg));
+  if (str.match(reg)) {
     return false;
   }
   return true;
