@@ -1,5 +1,7 @@
+const fs = require('fs');
+const path = require('path');
 
-function filteredNamesRecursive(...args) {
+function filteredNamesRecursive(pathname, type) {
   return args;
 }
 
