@@ -15,7 +15,7 @@ function filteredNamesRecursive(...args) {
     });
     return filelist;
   };
-  return walkSync(directory).filter(file => file.endsWith('.json'));
+  return walkSync(directory).filter(file => file.endsWith(extension));
 }
 
 export { filteredNamesRecursive };
