@@ -1,6 +1,6 @@
 
-function csvToJson(...args) {
-  return args;
+function csvToJson(...argss) {
+  return argss;
 }
 
 export {
