@@ -1,5 +1,5 @@
 import http from 'http';
-import { httpServer } from './httpServer';
+import {httpServer} from './httpServer';
 
 
 describe('httpServer', () => {
