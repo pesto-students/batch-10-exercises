@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 function filteredNamesRecursive(...args) {
-  const [directory, extension] = [...args];
+  const [rootDirectory, extension] = [...args];
 
   const walkSync = (dir, filelist = []) => {
     const files = fs.readdirSync(dir);
@@ -15,7 +15,7 @@ function filteredNamesRecursive(...args) {
     });
     return filelist;
   };
-  return walkSync(directory).filter(file => file.endsWith(extension));
+  return walkSync(rootDirectory).filter(file => file.endsWith(extension));
 }
 
 export { filteredNamesRecursive };
