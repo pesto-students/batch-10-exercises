@@ -1,8 +1,13 @@
+const fs = require('fs');
 
-function linesInFileAsync(...args) {
-  return args;
+const FileTextHelper = {
+  linesInFileAsync : async function(pathtofile , encoding = 'utf8'){
+    const fileData = fs.readFileSync(pathtofile , encoding);
+    const numberOfLines = fileData.split('\n');
+    return numberOfLines.length;
+  }
 }
 
 export {
-  linesInFileAsync,
+  FileTextHelper,
 };
