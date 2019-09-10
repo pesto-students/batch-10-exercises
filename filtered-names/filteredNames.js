@@ -1,21 +1,15 @@
+import { file } from '@babel/types';
+
 const fs = require('fs');
 const path = require('path');
 
 function filteredNames(...args) {
   const [rootDirectory, extension] = [...args];
+  const files = fs.readdirSync(rootDirectory);
 
-  const walkSync = (dir, filelist = []) => {
-    const files = fs.readdirSync(dir);
-    files.forEach(file => {
-      if (fs.statSync(dir + '/' + file).isDirectory()) {
-        filelist = walkSync(dir + '/' + file, filelist);
-      } else {
-        filelist.push(file);
-      }
-    });
-    return filelist;
-  };
-  return walkSync(rootDirectory).filter(file => file.endsWith(extension));
+  console.log(
+    files.every(el => fs.lstatSync(path.join(__dirname,el).isDirectory())
+  );
 }
 
 export { filteredNames };
