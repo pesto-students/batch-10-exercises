@@ -16,3 +16,7 @@ express101.get('/movie/:title', (req, res) => {
 express101.listen(port, () => {
   console.log(`Server listening on port: ${port}`);
 });
+
+export {
+  express101,
+};
