@@ -1,6 +1,11 @@
+const fetch = require('node-fetch');
 
-function bitcoinTicker(...args) {
-  return args;
+const api = 'https://api.coinmarketcap.com/v2/ticker';
+
+async function bitcoinTicker({ limit }) {
+  const data = await fetch(`${api}?limit=${limit}`, { method: 'GET' })
+    .then((res) => res.json());
+  return data;
 }
 
 export {
