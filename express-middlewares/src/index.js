@@ -2,14 +2,9 @@ const express = require('express');
 
 const app = express();
 
+const pestoHeaderMiddleware = require('./middle-ware/pestoHeaderMiddleware');
 
-const pestoHeaderMiddleware = (req, res, next) => {
 
-  const requestedRoute = req.path;
-  console.log(requestedRoute);
-  res.setHeader("middleware-header", requestedRoute);
-  next();
-}
 
 app.use(pestoHeaderMiddleware);
 
