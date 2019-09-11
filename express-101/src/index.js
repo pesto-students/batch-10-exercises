@@ -1,9 +1,16 @@
-const express = require('express');
-
+const express = require("express");
 const app = express();
 
-// 1) Create Routes
+const port = 3000;
 
-// 2) Start server on port 3000
+app.get("/", function(req, res) {  
+  res.send(`Hey, I am server response`);
+});
+
+app.get("/movie/:title", function(req, res) {
+  res.send(`My favorite movie is ${req.params.title}`);
+});
+
+app.listen(port,()=>console.log(`Server listening on port: ${port}`));
 
 module.exports = app;
