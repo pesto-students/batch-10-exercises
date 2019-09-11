@@ -3,7 +3,7 @@
 Create an express server. When the server starts, print the following in the console:
   >Server listening on port: 3000
 
-There should be two routes handling get requests: 
+There should be two routes handling get requests:: 
 
 1) `/` is the default route.
 
