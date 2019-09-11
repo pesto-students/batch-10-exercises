@@ -14,6 +14,7 @@
   "dependencies": {
     "chalk": "*",
     "dotenv": "*",
+    "express": "^4.17.1",
     "graphql-request": "*",
     "node-fetch": "*",
     "rollbar": "*",
@@ -39,6 +40,8 @@
     }
   },
   "lint-staged": {
-    "!(*.test).js": ["eslint"]
+    "!(*.test).js": [
+      "eslint"
+    ]
   }
 }
