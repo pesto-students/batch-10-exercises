@@ -1,8 +1,5 @@
-
 function express101(...args) {
-  return args;
+	return args;
 }
 
-export {
-  express101,
-};
+export { express101 };
