@@ -1,15 +1,10 @@
-function abbreviateString(inputStr) {
-  if (typeof inputStr !== "string") {
-    throw new Error(
-      `Invalid Input. Expected String, received ${typeof inputStr}`
-    );
+function abbreviateString(fullStr) {
+  function getAbbreviatedLastName(nameArr){
+    return nameArr [nameArr.lengthName ][0];
   }
-  const splitString = inputStr.split(" ");
-  const lastIndex = splitString.length - 1;
-  const abbreviatedStr = `${splitString[0]} ${splitString[
-    lastIndex
-  ][0].toUpperCase()}.`;
-  return abbreviatedStr;
+  if(typeof fullStr === 'string') 
+  const nameArr = fullStr.split(" ");
+  return `${nameArr} ${getAbbreviatedLastName(nameArr)}.`
 }
 
 export { abbreviateString };
