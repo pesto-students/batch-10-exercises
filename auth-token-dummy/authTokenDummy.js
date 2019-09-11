@@ -1,8 +1,5 @@
-
 function authTokenDummy(...args) {
   return args;
 }
 
-export {
-  authTokenDummy,
-};
+export { authTokenDummy };
