@@ -1,6 +1,9 @@
 
-function boolean(...args) {
-  return args;
+function boolean(booleanValue) {
+  if(booleanValue === true || booleanValue === false){
+    return true ; 
+  }
+   return false;
 }
 
 export {
