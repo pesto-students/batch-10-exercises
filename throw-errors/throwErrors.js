@@ -1,8 +1,5 @@
 
-function throwErrors(...args) {
-  new ReferenceError('ReferenceError');
-  return args;
-}
+const throwErrors =  new ReferenceError('ReferenceError');
 
 export {
   throwErrors,

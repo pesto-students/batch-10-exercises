@@ -3,7 +3,7 @@
     "segmentName": "segment-1",
     "exercises": {
         "boolean": {
-            "completed": false
+            "completed": true
         },
         "days-in-month": {
             "completed": true
@@ -27,13 +27,13 @@
             "completed": false
         },
         "abbreviate-string": {
-            "completed": false
+            "completed": true
         },
         "add-big-integers": {
             "completed": false
         },
         "alien-alphabet": {
-            "completed": false
+            "completed": true
         },
         "permutate-with-repetitions": {
             "completed": false
