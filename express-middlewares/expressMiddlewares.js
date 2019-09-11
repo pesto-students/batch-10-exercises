@@ -1,6 +1,6 @@
 
-function expressMiddlewares(...args) {
-  return args;
+function expressMiddlewares(...argss) {
+  return argss;
 }
 
 export {
