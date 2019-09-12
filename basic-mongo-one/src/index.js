@@ -1,5 +1,3 @@
-const getDb = require('./database.js').getDb;
-
 /* Q1 (*)
   Return the number of movies in the "movies" collection without using array.length
 */
@@ -15,10 +13,12 @@ const getMoviesCount = async (db) => {
 */
 const movieRating = async (db) => {
   const response = await db.collection('movies')
-    .findOne({ rating: 9.2, year: 1974 })
-    .project({ title: 1 });
-    console.log(response);
-  return response;
+    .aggregate([
+      { $match: { $or: [{ rating: 9.2, year: 1974 }] } },
+      { $project: { title: 1 } },
+      { $limit: 1 },
+    ]);
+  return { title: response };
 };
 
 /* Q3 (*)
