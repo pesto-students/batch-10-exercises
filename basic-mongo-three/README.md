@@ -17,7 +17,7 @@
 
 2) In `movieDetails` collection, do "text indexing" of `title` and `plot` fields. Then write a query for `$text` search for any of the following words:
       - weapon
-      - murder
+      - murdesr 
       - love
 
       Also write down the number of movies found using the text search query.
