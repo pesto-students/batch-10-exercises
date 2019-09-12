@@ -1,8 +1,5 @@
 module.exports = function authenticateUser(req, res, next) {
-  const movieList = ["The Butterfly Effect", "Jason Bourne"];
-  const db = {
-
-  }
+  const movieList = ['The Butterfly Effect', 'Jason Bourne'];
   console.log("req.headers.authorization", req.headers.authorization);
   if (req.headers.authorization) {
     next();
@@ -16,7 +13,3 @@ module.exports = function authenticateUser(req, res, next) {
   next();
 };
 
-// if (!req.headers.authorization) {
-//     return res.status(403).json({ error: 'No credentials sent!' });
-//   }
-//   next();
