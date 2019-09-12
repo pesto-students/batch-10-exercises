@@ -1,3 +1,6 @@
+import { getDbClient, getDb } from './database';
+getDbClient();
+getDb();
 /* Q1 (*)
   Return the number of movies in the "movies" collection without using array.length
 */
@@ -87,5 +90,5 @@ const addField = async () => {};
 const incrementalUpdate = async () => {};
 
 module.exports = {
-  getMoviesCount, 
+  getMoviesCount,
 };
