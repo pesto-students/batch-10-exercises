@@ -1,8 +1,5 @@
-
 function basicMongoTwo(...args) {
   return args;
 }
 
-export {
-  basicMongoTwo,
-};
+export { basicMongoTwo };
