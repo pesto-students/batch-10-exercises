@@ -18,7 +18,7 @@ const movieRating = async (db) => {
       { $project: { title: 1 } },
       { $limit: 1 },
     ]);
-  return { title: response };
+  return response;
 };
 
 /* Q3 (*)
@@ -98,6 +98,6 @@ const addField = async () => {};
 const incrementalUpdate = async () => {};
 
 module.exports = {
-  getMoviesCount, 
+  getMoviesCount,
   movieRating,
 };
