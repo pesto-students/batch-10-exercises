@@ -18,15 +18,15 @@ app.use(bodyParser.json());
 function authHeader(req, res, next) {
   if (req.path === '/') {
     const authValue = req.header('Authorization');
-    console.log(authValue);
-    if (authValue !== undefined) {
-      const decoded = jwt.verify(authValue, secretKey);
+    if (authValue !== 'undefined') {
+      const bearer = authValue.split(' ');
+      const token = bearer[1];
+      const decoded = jwt.verify(token, secretKey);
       if (decoded.username !== userObj.username) {
         res.send('Invalid token');
       } else if (bcrypt.compareSync(decoded.password, userObj.password)) {
         next();
       } else {
-        console.log(decoded.password, userObj.password);
         res.send(`Wrong password for ${userObj}`);
       }
     } else {
@@ -53,7 +53,7 @@ function authHeader(req, res, next) {
 app.use(authHeader);
 
 app.get('/', (req, res) => {
-  res.status(500).send('Not authenticated');
+  res.status(500).send({ data: ['The godfather', 'despicable me', 'inception', 'intersteller'] });
 });
 
 app.post('/signup', (req, res) => {

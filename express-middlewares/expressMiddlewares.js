@@ -11,7 +11,6 @@ function addHeader(req, res, next) {
 app.use(addHeader);
 
 app.get('/', (req, res) => {
-  
   res.send('Hello');
 });
 
