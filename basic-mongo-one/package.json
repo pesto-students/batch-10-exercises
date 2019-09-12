@@ -5,10 +5,12 @@
   "author": "Arfat Salman",
   "license": "MIT",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "nodemon src/index.js"
   },
   "dependencies": {
-    "mongodb": "*"
+    "mongodb": "^3.3.2",
+    "nodemon": "^1.19.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.2.0",

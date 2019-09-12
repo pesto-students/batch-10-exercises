@@ -1,8 +1,13 @@
+const { getDbClient , getDb } = require('./database');
+
+const connection = getDbClient();
+const db = getDb();
+
 /* Q1 (*)
   Return the number of movies in the "movies" collection without using array.length
 */
 const getMoviesCount = async () => {};
-
+console.log();
 /* Q2 (*)
   Return the first movie with imdb rating = 9.2 and year = 1974.
   Also, use mongodb projections to only get title from mongodb as opposed
