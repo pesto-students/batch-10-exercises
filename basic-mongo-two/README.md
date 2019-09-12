@@ -4,7 +4,7 @@
 
 - Use `mongorestore` to restore the dump into your running `mongod`. A new database called `pesto-day-19` will be created.
 
-- Perform a `find()` on the collection inside the database. (There is only one collection initially). 
+- Perform a `find()` on the collection inside the database. (There is only one collection initially).
 
 - Insert some data using `insertOne()` or `insertMany()` for `Engineers/companies and their open source projects`. Follow the same structure as the document already present in the database.
 
