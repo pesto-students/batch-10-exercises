@@ -8,7 +8,7 @@ const getMoviesCount = async () => {};
   Also, use mongodb projections to only get title from mongodb as opposed
   to accessing title property from the object
 */
-const movieRating = async () => {};
+const movieRating = async () => {}; 
 
 /* Q3 (*)
   Return the number of movies written by all these people (exactly these people in this order):
