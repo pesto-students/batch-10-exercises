@@ -1,5 +1,5 @@
-import { getDb, getDbClient } from '../src/database';
-import {
+const { getDb, getDbClient } = require( '../src/database');
+const {
   getMoviesCount,
   movieRating,
   writersIntersection,
@@ -15,7 +15,7 @@ import {
   fieldArraySize,
   addField,
   incrementalUpdate,
-} from '../src';
+} = require ('../src');
 
 describe('Mongo Queries', () => {
   let db;
