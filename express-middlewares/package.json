@@ -1,0 +1,14 @@
+{
+  "name": "lang",
+  "version": "1.0.0",
+  "description": "log lang",
+  "main": "expressMiddlewares.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thapasya",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
