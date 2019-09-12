@@ -1,14 +1,16 @@
 module.exports = function authenticateUser(req, res, next) {
-  const movieList = ['The Butterfly Effect', 'Jason Bourne'];
+
   console.log("req.headers.authorization", req.headers.authorization);
   if (req.headers.authorization) {
+    req.authenticatedUser = true;
+    if(checkDb) {
+      
+    }else{
+      req.authenticatedUser = "Invalid token";
+    }
     next();
-  } else if(checkDb) {
-    // return unauthorized
-    res.send(403, "No Credentials Sent");
-  }else {
-    // return unauthorized
-    res.send(401, "Not Authenticated");
+  } else {
+    req.authenticatedUser = "Not Authenticated";
   }
   next();
 };

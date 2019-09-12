@@ -12,6 +12,7 @@
     "node": ">=10.15"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "chalk": "*",
     "dotenv": "*",
     "graphql-request": "*",
@@ -39,6 +40,8 @@
     }
   },
   "lint-staged": {
-    "!(*.test).js": ["eslint"]
+    "!(*.test).js": [
+      "eslint"
+    ]
   }
 }

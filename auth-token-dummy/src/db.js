@@ -25,4 +25,5 @@ const db = {
     }
     
   }
-  module.exports = checkDb;
+  const movieList = ['The Butterfly Effect', 'Jason Bourne'];
+  module.exports = {checkDb,movieList};
