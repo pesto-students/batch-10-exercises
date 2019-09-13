@@ -1,6 +1,7 @@
 
-function modifyObjectKeys(...args) {
-  return args;
+function modifyObjectKeys(obj , Fn) {
+  
+  return argss;
 }
 
 export {
