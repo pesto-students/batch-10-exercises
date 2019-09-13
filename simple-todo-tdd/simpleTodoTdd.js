@@ -1,6 +1,6 @@
 
-function simpleTodoTdd(...args) {
-  return args;
+function simpleTodoTdd(...argss) {
+  return argss;
 }
 
 export {
