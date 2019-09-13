@@ -4,13 +4,81 @@ It should open the whatsapp app on mobile and the message should appear in the a
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Share Message With Whatsapp </title>
+    <meta name="description" content="Web Application to share message directly to WhatsApp">
+    <meta property="og:title" content="Share Message With Whatsapp" />
+    <meta name="twitter:title" content="Share Message With Whatsapp" />
+    <meta property="og:description" content="Web Application to share message directly to WhatsApp" />
+    <meta name="twitter:title" content="Share Message With Whatsapp" />
+    <meta property="twitter:description" content="Web Application to share message directly to WhatsApp" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          type="text/css"/>
 </head>
+
 <body>
-  
+    <div class="from-section col-md-12">
+        <h1>Send Message Directly To WhatsApp From Web</h1>
+        <form action="whatsapp://send" method="get" class="form form-horizontal">
+            <!-- INPUT of Reciever Mobile Number -->
+
+            <div class="form-group">
+                <label for="UserMobileNumber">WhatsApp User Mobile Number</label>
+                <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">+91</span>
+                        </div>
+                        <input type="number" 
+                            name="phone"
+                            minlength="10"
+                            maxlength="10" 
+                            required="true"
+                            class="form-control col-md-3" 
+                            autocomplete="false" 
+                            autofocus="false" 
+                            id="UserMobileNumber"
+                            aria-describedby="UserMobileNumberHelp" 
+                            placeholder="Type Reciever's Mobile Number" />
+                </div>       
+                <small id="UserMobileNumberHelp" 
+                       class="form-text text-muted">
+                       Please Type Message Reciever's Mobile Number
+                </small>
+            </div>
+            <!-- End For INPUT of Reciever Mobile Number -->
+
+            <div class="form-group">
+                <label for="MessageForUser">WhatsApp User Mobile Number</label>
+                <textarea class="form-control col-md-4" 
+                          aria-describedby="MessageForUserHelp" 
+                          rows="10" 
+                          required="true"
+                          cols="16" 
+                          name="text" 
+                          autocomplete="false"
+                          autofocus="false" 
+                          id="MessageForUser">
+                </textarea>
+                <small id="MessageForUserHelp" 
+                       class="form-text text-muted">
+                       Please Write a Message
+                </small>
+            </div>
+
+
+            <div class="">
+                <button class="form-control col-md-2 btn btn-primary" 
+                        type="submit">
+                        Share On WhatsApp
+                </button>
+            </div>
+
+        </form>
+    </div>
 </body>
 </html>
