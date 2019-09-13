@@ -1,9 +1,23 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
+import { BrowserRouter , Switch, Route} from 'react-router-dom';
 
-import './App.css';
+import Form from './components/Form';
+import List from './components/List';
 
-const App = () => (
-  <h1>Hello World</h1>
-);
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <BrowserRouter>
+        <Switch>
+          <Route excat path='/' component={Form} />
+          <Route path='/new/:id' component={Form} />
+          <Route path='/List' component={List} />
+          </Switch>
+        </BrowserRouter> 
+      </Fragment>
+    );
+  }
+}
 
 export default App;
