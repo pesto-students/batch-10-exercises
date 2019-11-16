@@ -1,0 +1,43 @@
+.flexHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: purple;
+  color: white;
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.flexItem {
+  background-color: aqua;
+  margin: 5px;
+  padding: 10px;
+}
+.flexItem1 {
+  order: 1;
+  flex: 2;
+}
+
+.flexItem2 {
+  order: 2;
+  flex: 2;
+}
+
+.flexItem3 {
+  order: 3;
+  flex: 3;
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.buttonFlexItem {
+  flex: 1;
+  margin: 5px;
+}
